@@ -7,12 +7,14 @@
   @include fluid-type(768px, 1920px, 14px, 20px);
   @include fluid-size(gap, 768px, 1920px, 12px, 32px);
 
-  li {
+  a {
     position: relative;
     display: inline-block;
     font-weight: 400;
     cursor: pointer;
     padding-bottom: 4px;
+    text-decoration: none;
+    color: unset;
 
     &::before {
       content: attr(data-text);
