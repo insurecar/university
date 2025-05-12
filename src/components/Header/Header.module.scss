@@ -1,0 +1,16 @@
+// @use "@/styles/mixins" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: red;
+  max-width: 1920px;
+  padding: 5px 45px;
+  margin: 0 auto;
+
+  @include fluid-size("padding-top", 320px, 1920px, 2px, 5px);
+  @include fluid-size("padding-bottom", 320px, 1920px, 2px, 5px);
+  @include fluid-size("padding-left", 320px, 1920px, 10px, 45px);
+  @include fluid-size("padding-right", 320px, 1920px, 10px, 45px);
+}

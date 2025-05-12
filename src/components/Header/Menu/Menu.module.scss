@@ -1,0 +1,12 @@
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  background: yellow;
+
+  @include fluid-type(768px, 1920px, 12px, 20px);
+
+  @media (max-width: $m768) {
+    display: none;
+  }
+}

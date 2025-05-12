@@ -1,0 +1,52 @@
+@use "sass:math";
+
+@function strip-unit($value) {
+  @if math.is-unitless($value) {
+    @return $value;
+  }
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-size($name, $min-vw, $max-vw, $min-size, $max-size) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-size);
+  $u4: math.unit($max-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      #{$name}: $min-size;
+
+      @media screen and (min-width: $min-vw) {
+        #{$name}: calc(
+          #{$min-size} + #{strip-unit($max-size - $min-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+
+      @media screen and (min-width: $max-vw) {
+        #{$name}: $max-size;
+      }
+    }
+  }
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  font-size: $min-font-size;
+
+  @media screen and (min-width: $min-vw) {
+    font-size: calc(
+      #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+    );
+  }
+
+  @media screen and (min-width: $max-vw) {
+    font-size: $max-font-size;
+  }
+}
+@mixin response($prefix, $media) {
+  @media only screen and (#{$prefix}-width: #{$media}px) {
+    @content;
+  }
+}
