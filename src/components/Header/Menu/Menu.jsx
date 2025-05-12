@@ -7,7 +7,7 @@ export const Menu = () => {
   return (
     <ul className={styles.menu}>
       {Object.entries(headerItems).map(([key, value]) => (
-        <li className={styles.listItem} key={key}>
+        <li className={styles.listItem} key={key} data-text={value}>
           {value}
         </li>
       ))}

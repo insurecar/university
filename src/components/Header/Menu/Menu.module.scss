@@ -1,10 +1,50 @@
 .menu {
   list-style: none;
   display: flex;
-  gap: 12px;
-  background: yellow;
 
-  @include fluid-type(768px, 1920px, 12px, 20px);
+  font-family: "Roboto";
+
+  @include fluid-type(768px, 1920px, 14px, 20px);
+  @include fluid-size(gap, 768px, 1920px, 12px, 32px);
+
+  li {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    cursor: pointer;
+    color: #1e4022;
+    padding-bottom: 4px;
+
+    &::before {
+      content: attr(data-text);
+      font-weight: 700;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #1e4022;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      font-weight: 700;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
 
   @media (max-width: $m768) {
     display: none;
