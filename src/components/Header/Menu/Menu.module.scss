@@ -12,7 +12,6 @@
     display: inline-block;
     font-weight: 400;
     cursor: pointer;
-    color: #1e4022;
     padding-bottom: 4px;
 
     &::before {
@@ -31,7 +30,7 @@
       bottom: 0;
       width: 100%;
       height: 2px;
-      background-color: #1e4022;
+      background-color: $green;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -39,6 +38,7 @@
 
     &:hover {
       font-weight: 700;
+      color: $green;
     }
 
     &:hover::after {
@@ -46,7 +46,7 @@
     }
   }
 
-  @media (max-width: $m768) {
+  @media (max-width: $l1279) {
     display: none;
   }
 }

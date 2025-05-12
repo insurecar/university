@@ -1,3 +1,55 @@
 .search {
-  background: black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.input {
+  width: 0;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: width 1s ease, opacity 0.3s ease, transform 0.3s ease;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid #676767;
+  font-size: 16px;
+  pointer-events: none;
+  background: transparent;
+
+  &::placeholder {
+    padding-left: 2px;
+    font-family: "Roboto";
+    color: $green;
+  }
+}
+
+.inputVisible {
+  width: 150px;
+  opacity: 1;
+  transform: translateX(0);
+  padding: 4px 8px;
+  border-bottom: 2px solid #676767;
+  pointer-events: auto;
+  background: transparent;
+
+  &::placeholder {
+    padding-left: 2px;
+    font-family: "Roboto";
+    color: $green;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
