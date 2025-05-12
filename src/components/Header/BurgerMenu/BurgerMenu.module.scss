@@ -1,0 +1,5 @@
+.burger {
+  @media (min-width: calc(#{$l} + 1px)) {
+    display: none;
+  }
+}

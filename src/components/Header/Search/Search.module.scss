@@ -11,6 +11,10 @@
     align-items: center;
     cursor: pointer;
   }
+
+  @media (max-width: $l) {
+    display: none;
+  }
 }
 
 .input {

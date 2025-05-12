@@ -1,14 +1,13 @@
 import styles from "./Header.module.scss";
-import { Logo, Search, Menu } from "./";
+import { Logo, Search, Menu, BurgerMenu } from "./";
 
 export const Header = () => {
-  console.log("HEADER+++++++++++");
-
   return (
     <div className={styles.header}>
       <Logo />
       <Menu />
       <Search />
+      <BurgerMenu />
     </div>
   );
 };
