@@ -2,3 +2,8 @@
   @include fluid-size(width, 320px, 1920px, 112px, 225px);
   @include fluid-size(height, 320px, 1920px, 43px, 85px);
 }
+.logoIcon {
+  width: 100%;
+  height: auto;
+  max-width: 225px;
+}
