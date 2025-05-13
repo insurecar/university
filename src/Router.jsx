@@ -8,8 +8,7 @@ import {
   Partners,
   ForMedia,
 } from "./components/pages";
-import { App } from "./components";
-import { Home } from "./components/Home";
+import { App, Home } from "./components";
 
 export const Router = () => (
   <BrowserRouter>
