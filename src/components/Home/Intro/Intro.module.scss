@@ -1,9 +1,9 @@
 .intro {
-  padding: 100px 160px;
   background-color: $base-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   @include fluid-size("padding-top", 768px, 1920px, 40px, 100px);
   @include fluid-size("padding-bottom", 768px, 1920px, 40px, 100px);
@@ -11,18 +11,19 @@
   @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
 
   @media (max-width: 768px) {
-    display: none;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+    @include fluid-size("padding-left", 320px, 767px, 32px, 40px);
+    @include fluid-size("padding-right", 320px, 767px, 32px, 40px);
   }
 }
 
 .description {
-  width: 947px;
-  height: 601px;
   display: flex;
   flex-direction: column;
 
   @include fluid-size("width", 768px, 1920px, 379px, 947px);
-  @include fluid-size("height", 768px, 1920px, 240px, 601px);
 
   .title {
     font-family: "Roboto";
@@ -72,8 +73,8 @@
   }
 
   .btn {
-    margin-top: auto;
     font-family: "Roboto";
+    cursor: pointer;
     align-self: flex-start;
     display: flex;
     align-items: center;
@@ -82,10 +83,21 @@
     border: none;
     border-radius: 8px;
     color: #fff;
+    transition: background 0.3s ease;
     @include fluid-size("padding-top", 768px, 1920px, 6px, 12px);
     @include fluid-size("padding-bottom", 768px, 1920px, 6px, 12px);
     @include fluid-size("padding-left", 768px, 1920px, 12px, 24px);
     @include fluid-size("padding-right", 768px, 1920px, 12px, 24px);
+    @include fluid-size("margin-top", 768px, 1920px, 25px, 46px);
+
+    &:hover {
+      background: #164624;
+      color: #e6e6e6;
+    }
+  }
+
+  @media (max-width: 768px) {
+    @include fluid-size("width", 320px, 767px, 300px, 700px);
   }
 }
 
@@ -102,5 +114,19 @@
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+}
+
+.star {
+  position: absolute;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  @include fluid-size("right", 320px, 1920px, 50px, 150px);
+  @include fluid-size("width", 768px, 1920px, 60px, 99px);
+
+  svg {
+    width: 100%;
+    height: auto;
+    max-width: 99px;
   }
 }

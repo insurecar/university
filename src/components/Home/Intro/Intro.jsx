@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import SignatureIcon from "../../../assets/SignatureIcon.svg?react";
 import ArrowIcon from "../../../assets/ArrowIcon.svg?react";
 import PersonPhoto from "../../../assets/PersonPhoto.svg?react";
+import StarIcon from "../../../assets/StarIcon.svg?react";
 
 export const Intro = () => {
   const { t } = useTranslation();
@@ -29,6 +30,9 @@ export const Intro = () => {
       </div>
       <div className={styles.photo}>
         <PersonPhoto className={styles.svg} />
+      </div>
+      <div className={styles.star}>
+        <StarIcon />
       </div>
     </div>
   );
