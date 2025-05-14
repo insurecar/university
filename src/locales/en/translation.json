@@ -14,5 +14,36 @@
     "text": "Dear Esteemed Guests, Faculty, Students, and Alumni,It is with great joy and profound gratitude that I welcome you to this momentous occasion – the [institution’s name] Jubilee Celebration. This milestone is a testament to the dedication, achievements, and enduring legacy of our academic community.",
     "position": "University Rector",
     "btn": "Explore Jubilee Events"
+  },
+  "jubilee": {
+    "units": {
+      "week": [
+        "week",
+        "weeks",
+        "weeks"
+      ],
+      "day": [
+        "day",
+        "days",
+        "days"
+      ],
+      "hour": [
+        "hour",
+        "hours",
+        "hours"
+      ],
+      "minute": [
+        "minute",
+        "minutes",
+        "minutes"
+      ],
+      "second": [
+        "second",
+        "seconds",
+        "seconds"
+      ]
+    },
+    "title": "Jubilee | ",
+    "title1": "October 12, 2026"
   }
 }

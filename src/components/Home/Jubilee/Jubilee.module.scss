@@ -1,3 +1,41 @@
 .jubilee {
-  background: green;
+  background: #f2f1e8;
+  font-family: "Roboto";
+
+  @include fluid-size("padding-top", 768px, 1920px, 32px, 64px);
+  @include fluid-size("padding-bottom", 768px, 1920px, 32px, 64px);
+}
+
+.title {
+  text-align: center;
+
+  @include fluid-type(768px, 1920px, 16px, 32px);
+
+  .titleText {
+    font-weight: 700;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 24px;
+  list-style: none;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .number {
+      color: #0b3721;
+      font-weight: 500;
+
+      @include fluid-type(768px, 1920px, 18px, 64px);
+    }
+
+    .value {
+      @include fluid-type(768px, 1920px, 10px, 18px);
+    }
+  }
 }

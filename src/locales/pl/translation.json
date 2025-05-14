@@ -14,5 +14,36 @@
         "text": "Drodzy Szanowni Goście, Kadra, Studenci i Absolwenci, Z wielką radością i głęboką wdzięcznością witam Was na tej doniosłej okazji – Jubileuszowej Obchodach [nazwa instytucji]. Ten kamień milowy jest świadectwem poświęcenia, osiągnięć i trwałego dziedzictwa naszej społeczności akademickiej.",
         "position": "Rektor uniwersytecki",
         "btn": "Przeglądaj wydarzenia jubileuszowe"
+    },
+    "jubilee": {
+        "units": {
+            "week": [
+                "tydzień",
+                "tygodnie",
+                "tygodni"
+            ],
+            "day": [
+                "dzień",
+                "dni",
+                "dni"
+            ],
+            "hour": [
+                "godzina",
+                "godziny",
+                "godzin"
+            ],
+            "minute": [
+                "minuta",
+                "minuty",
+                "minut"
+            ],
+            "second": [
+                "sekunda",
+                "sekundy",
+                "sekund"
+            ]
+        },
+        "title": "Jubileusz | ",
+        "title1": "12 października 2026"
     }
 }

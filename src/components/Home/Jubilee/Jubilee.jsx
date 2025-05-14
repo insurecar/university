@@ -1,22 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-const pluralForms = {
-  pl: {
-    week: ["tydzień", "tygodnie", "tygodni"],
-    day: ["dzień", "dni", "dni"],
-    hour: ["godzina", "godziny", "godzin"],
-    minute: ["minuta", "minuty", "minut"],
-    second: ["sekunda", "sekundy", "sekund"],
-  },
-  en: {
-    week: ["week", "weeks", "weeks"],
-    day: ["day", "days", "days"],
-    hour: ["hour", "hours", "hours"],
-    minute: ["minute", "minutes", "minutes"],
-    second: ["second", "seconds", "seconds"],
-  },
-};
+import styles from "./Jubilee.module.scss";
 
 const pluralize = (value, forms) => {
   const abs = Math.abs(value);
@@ -30,20 +14,19 @@ const getTimeLeft = (targetDate) => {
   const diff = new Date(targetDate) - new Date();
   if (diff <= 0) return null;
 
-  const seconds = Math.floor((diff / 1000) % 60);
-  const minutes = Math.floor((diff / 1000 / 60) % 60);
-  const hours = Math.floor((diff / 1000 / 60 / 60) % 24);
+  const second = Math.floor((diff / 1000) % 60);
+  const minute = Math.floor((diff / 1000 / 60) % 60);
+  const hour = Math.floor((diff / 1000 / 60 / 60) % 24);
   const daysTotal = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const weeks = Math.floor(daysTotal / 7);
-  const days = daysTotal % 7;
+  const week = Math.floor(daysTotal / 7);
+  const day = daysTotal % 7;
 
-  return { weeks, days, hours, minutes, seconds };
+  return [week, day, hour, minute, second];
 };
 
 export const Jubilee = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
-  const { i18n } = useTranslation();
-  const lang = i18n.language === "pl" ? "pl" : "en";
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,29 +35,28 @@ export const Jubilee = ({ targetDate }) => {
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  if (!timeLeft) return <div>Time is up!</div>;
-
-  const { weeks, days, hours, minutes, seconds } = timeLeft;
+  const timeUnits = ["week", "day", "hour", "minute", "second"];
 
   return (
-    <div style={{ display: "flex", gap: "12px", fontFamily: "sans-serif" }}>
-      <div>
-        <strong>{weeks}</strong> {pluralize(weeks, pluralForms[lang].week)}
+    timeLeft && (
+      <div className={styles.jubilee}>
+        <div className={styles.title}>
+          {t("jubilee.title")}{" "}
+          <span className={styles.titleText}>{t("jubilee.title1")}</span>
+        </div>
+        <ul className={styles.list}>
+          {timeLeft.map((value, index) => {
+            const unit = timeUnits[index];
+            const forms = t(`jubilee.units.${unit}`, { returnObjects: true });
+            return (
+              <li key={unit} className={styles.item}>
+                <div className={styles.number}>{value}</div>
+                <div className={styles.value}>{pluralize(value, forms)}</div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <div>
-        <strong>{days}</strong> {pluralize(days, pluralForms[lang].day)}
-      </div>
-      <div>
-        <strong>{hours}</strong> {pluralize(hours, pluralForms[lang].hour)}
-      </div>
-      <div>
-        <strong>{minutes}</strong>{" "}
-        {pluralize(minutes, pluralForms[lang].minute)}
-      </div>
-      <div>
-        <strong>{seconds}</strong>{" "}
-        {pluralize(seconds, pluralForms[lang].second)}
-      </div>
-    </div>
+    )
   );
 };
