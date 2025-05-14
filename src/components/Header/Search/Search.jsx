@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export const Search = () => {
   const [search, setSearch] = useState(true);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const inputRef = useRef(true);
   const containerRef = useRef(true);
@@ -47,7 +47,7 @@ export const Search = () => {
         <input
           type="text"
           ref={inputRef}
-          placeholder="Search"
+          placeholder={t("search")}
           autoFocus={!search}
           className={`${styles.input} ${!search ? styles.inputVisible : ""}`}
         />

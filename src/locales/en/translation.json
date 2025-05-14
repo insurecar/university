@@ -7,5 +7,12 @@
     "partnership": "Partnership",
     "partners": "Partners",
     "for-media": "For media"
+  },
+  "search": "Search",
+  "home": {
+    "title": "100 Years of Excellence — Celebrating Our Legacy, Shaping the Future!",
+    "text": "Dear Esteemed Guests, Faculty, Students, and Alumni,It is with great joy and profound gratitude that I welcome you to this momentous occasion – the [institution’s name] Jubilee Celebration. This milestone is a testament to the dedication, achievements, and enduring legacy of our academic community.",
+    "position": "University Rector",
+    "btn": "Explore Jubilee Events"
   }
 }

@@ -7,5 +7,12 @@
         "partnership": "Współpraca",
         "partners": "Wzmacniacz",
         "for-media": "Dla mediów"
+    },
+    "search": "Szukaj",
+    "home": {
+        "title": "100 lat doskonałości - świętowanie naszej dziedzictwa, kształtowanie przyszłości!",
+        "text": "Drodzy Szanowni Goście, Kadra, Studenci i Absolwenci, Z wielką radością i głęboką wdzięcznością witam Was na tej doniosłej okazji – Jubileuszowej Obchodach [nazwa instytucji]. Ten kamień milowy jest świadectwem poświęcenia, osiągnięć i trwałego dziedzictwa naszej społeczności akademickiej.",
+        "position": "Rektor uniwersytecki",
+        "btn": "Przeglądaj wydarzenia jubileuszowe"
     }
 }

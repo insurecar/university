@@ -1,0 +1,106 @@
+.intro {
+  padding: 100px 160px;
+  background-color: $base-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include fluid-size("padding-top", 768px, 1920px, 40px, 100px);
+  @include fluid-size("padding-bottom", 768px, 1920px, 40px, 100px);
+  @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+  @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.description {
+  width: 947px;
+  height: 601px;
+  display: flex;
+  flex-direction: column;
+
+  @include fluid-size("width", 768px, 1920px, 379px, 947px);
+  @include fluid-size("height", 768px, 1920px, 240px, 601px);
+
+  .title {
+    font-family: "Roboto";
+    font-size: 64px;
+    font-weight: 400;
+    color: #2e2e27;
+
+    @include fluid-type(768px, 1920px, 22px, 64px);
+  }
+
+  .text {
+    @include fluid-type(768px, 1920px, 14px, 20px);
+    @include fluid-size("margin-top", 768px, 1920px, 12px, 24px);
+    @include fluid-size("line-height", 768px, 1920px, 18px, 32px);
+  }
+
+  .person {
+    display: flex;
+    align-items: center;
+    @include fluid-size("gap", 768px, 1920px, 13px, 32px);
+    @include fluid-size("margin-top", 768px, 1920px, 12px, 24px);
+
+    .job {
+      font-family: "Roboto";
+
+      .position {
+        font-weight: 300;
+        @include fluid-type(768px, 1920px, 10px, 14px);
+      }
+
+      .name {
+        font-weight: 700;
+        @include fluid-type(768px, 1920px, 13px, 17px);
+      }
+    }
+
+    .signature {
+      @include fluid-size("width", 768px, 1920px, 65px, 164px);
+      @include fluid-size("height", 768px, 1920px, 38px, 95px);
+
+      .signatureIcon {
+        width: 100%;
+        height: auto;
+        max-width: 164px;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: auto;
+    font-family: "Roboto";
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: $green;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    @include fluid-size("padding-top", 768px, 1920px, 6px, 12px);
+    @include fluid-size("padding-bottom", 768px, 1920px, 6px, 12px);
+    @include fluid-size("padding-left", 768px, 1920px, 12px, 24px);
+    @include fluid-size("padding-right", 768px, 1920px, 12px, 24px);
+  }
+}
+
+.photo {
+  width: 581px;
+  height: 669px;
+  border-radius: 8px;
+
+  @include fluid-size("width", 768px, 1920px, 232px, 581px);
+  @include fluid-size("height", 768px, 1920px, 267px, 669px);
+
+  .svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
