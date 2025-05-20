@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "..";
-import styles from "./App.module.scss";
+import { Header, Footer } from "..";
 
 export const App = () => {
   return (
     <>
       <Header />
-      <main className={styles.main}>
+      {/* <main className={styles.main}>
         <Outlet />
-      </main>
+      </main> */}
+      <Footer />
     </>
   );
 };
