@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LogoFooterIcon from "../../assets/LogoFooterIcon.svg?react";
 import { socialIcons } from "../../assets/SocialMediaIcons";
+import { Button } from "../UI";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -28,13 +29,13 @@ export const Footer = () => {
         </div>
 
         <div className={styles.likeUs}>
-          <div className={styles.likeUsTitle}>Title</div>
-          <button className={styles.likeUsGadgets}>1</button>
-          <button className={styles.likeUsWebsite}>2</button>
+          <div className={styles.likeUsTitle}>{t("footer.title")}</div>
+          <Button type="university" />
+          <Button type="website" />
         </div>
       </div>
 
-      <div className={styles.policy}>2</div>
+      <div className={styles.policy}>{t("footer.rights")}</div>
     </footer>
   );
 };

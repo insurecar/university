@@ -62,6 +62,9 @@
   },
   "footer": {
     "social_title": "Social Media",
-    "university-gadgets": "You may also like:"
+    "title": "You may also like:",
+    "university-gadgets": "University Gadgets",
+    "website": "Our Website",
+    "rights": "© 2025 | UEP | All Rights Reserved"
   }
 }

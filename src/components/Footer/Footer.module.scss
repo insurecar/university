@@ -7,8 +7,8 @@
 }
 
 .info {
-  //   background: yellow;
   display: flex;
+  @include fluid-size("gap", 768px, 1920px, 77px, 192px);
 
   .logo {
     @include fluid-size(width, 320px, 1920px, 112px, 225px);
@@ -22,8 +22,8 @@
   }
 
   .social {
-    @include fluid-size("margin-left", 768px, 1920px, 77px, 192px);
-
+    // @include fluid-size("margin-left", 768px, 1920px, 77px, 192px);
+    max-width: 341px;
     .socialTitle {
       color: #fff;
       font-family: "Roboto";
@@ -60,6 +60,10 @@
   .likeUs {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    // @include fluid-size("margin-left", 768px, 1920px, 77px, 192px);
+    @include fluid-size(gap, 768px, 1920px, 10px, 24px);
 
     .likeUsTitle {
       color: #fff;
@@ -69,8 +73,18 @@
       @include fluid-type(768px, 1920px, 12px, 22px);
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    // flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 .policy {
-  background: lightgreen;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+
+  @include fluid-type(768px, 1920px, 8px, 14px);
 }
