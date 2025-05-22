@@ -1,9 +1,9 @@
 import styles from "./Intro.module.scss";
 import { useTranslation } from "react-i18next";
 import SignatureIcon from "../../../assets/SignatureIcon.svg?react";
-import ArrowIcon from "../../../assets/ArrowIcon.svg?react";
 import PersonPhoto from "../../../assets/PersonPhoto.svg?react";
 import StarIcon from "../../../assets/StarIcon.svg?react";
+import { Button } from "../../UI";
 
 export const Intro = () => {
   const { t } = useTranslation();
@@ -21,12 +21,7 @@ export const Intro = () => {
             <SignatureIcon className={styles.signatureIcon} />
           </div>
         </div>
-        <button className={styles.btn}>
-          <span>{t("home.btn")}</span>
-          <span>
-            <ArrowIcon />
-          </span>
-        </button>
+        <Button type="explore" className={styles.personButton} />
       </div>
       <div className={styles.photo}>
         <PersonPhoto className={styles.svg} />

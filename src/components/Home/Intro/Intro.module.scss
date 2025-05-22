@@ -72,32 +72,8 @@
     }
   }
 
-  .btn {
-    font-family: "Roboto";
-    cursor: pointer;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: $green;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    transition: background 0.3s ease;
-    @include fluid-size("padding-top", 768px, 1920px, 6px, 12px);
-    @include fluid-size("padding-bottom", 768px, 1920px, 6px, 12px);
-    @include fluid-size("padding-left", 768px, 1920px, 12px, 24px);
-    @include fluid-size("padding-right", 768px, 1920px, 12px, 24px);
+  .personButton {
     @include fluid-size("margin-top", 768px, 1920px, 25px, 46px);
-
-    &:hover {
-      background: #164624;
-      color: #e6e6e6;
-    }
-  }
-
-  @media (max-width: 768px) {
-    @include fluid-size("width", 320px, 767px, 300px, 700px);
   }
 }
 

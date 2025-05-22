@@ -1,0 +1,90 @@
+.footer {
+  background: #0b3721;
+  @include fluid-size("padding-top", 768px, 1920px, 36px, 90px);
+  @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+  @include fluid-size("padding-top", 768px, 1920px, 36px, 90px);
+  @include fluid-size("padding-bottom", 768px, 1920px, 13px, 90px);
+}
+
+.info {
+  display: flex;
+  @include fluid-size("gap", 768px, 1920px, 77px, 192px);
+
+  .logo {
+    @include fluid-size(width, 320px, 1920px, 112px, 225px);
+    @include fluid-size(height, 320px, 1920px, 43px, 85px);
+  }
+
+  .logoIcon {
+    width: 100%;
+    height: auto;
+    max-width: 225px;
+  }
+
+  .social {
+    // @include fluid-size("margin-left", 768px, 1920px, 77px, 192px);
+    max-width: 341px;
+    .socialTitle {
+      color: #fff;
+      font-family: "Roboto";
+      font-weight: 700;
+
+      @include fluid-type(768px, 1920px, 12px, 22px);
+    }
+
+    .socialWrapperOfIcons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 30px;
+      list-style: none;
+
+      @include fluid-size(gap, 768px, 1920px, 13px, 33px);
+      @include fluid-size("margin-top", 768px, 1920px, 8px, 16px);
+    }
+
+    .socialIconWrap {
+      cursor: pointer;
+
+      @include fluid-size(width, 768px, 1920px, 15px, 26px);
+      @include fluid-size(height, 768px, 1920px, 15px, 26px);
+    }
+
+    .socialIcon {
+      width: 100%;
+      height: auto;
+      max-width: 26px;
+    }
+  }
+
+  .likeUs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    // @include fluid-size("margin-left", 768px, 1920px, 77px, 192px);
+    @include fluid-size(gap, 768px, 1920px, 10px, 24px);
+
+    .likeUsTitle {
+      color: #fff;
+      font-family: "Roboto";
+      font-weight: 700;
+
+      @include fluid-type(768px, 1920px, 12px, 22px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    // flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.policy {
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+
+  @include fluid-type(768px, 1920px, 8px, 14px);
+}

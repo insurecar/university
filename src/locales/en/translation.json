@@ -59,5 +59,12 @@
     "9": "October",
     "10": "November",
     "11": "December"
+  },
+  "footer": {
+    "social_title": "Social Media",
+    "title": "You may also like:",
+    "university-gadgets": "University Gadgets",
+    "website": "Our Website",
+    "rights": "© 2025 | UEP | All Rights Reserved"
   }
 }

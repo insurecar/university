@@ -1,0 +1,44 @@
+.btn {
+  font-family: "Roboto";
+  cursor: pointer;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+
+  @include fluid-size("padding-top", 768px, 1920px, 6px, 12px);
+  @include fluid-size("padding-bottom", 768px, 1920px, 6px, 12px);
+  @include fluid-size("padding-left", 768px, 1920px, 12px, 24px);
+  @include fluid-size("padding-right", 768px, 1920px, 12px, 24px);
+}
+
+.btnGreen {
+  background: $green;
+  color: #fff;
+  transition: background 0.3s ease;
+
+  svg path {
+    stroke: #fff;
+  }
+
+  &:hover {
+    background: #164624;
+    color: #e6e6e6;
+  }
+}
+
+.btnWhite {
+  background: #fff;
+  color: $green;
+
+  svg path {
+    stroke: $green;
+  }
+
+  &:hover {
+    background: #e6e6e6;
+    color: #164624;
+  }
+}
