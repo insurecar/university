@@ -60,6 +60,24 @@
         "10": "Listopad",
         "11": "Grudzień"
     },
+    "locations": {
+        "Warsaw": "Warszawa",
+        "Krakow": "Kraków",
+        "Lodz": "Łódź",
+        "Wroclaw": "Wrocław",
+        "Poznan": "Poznań",
+        "Gdansk": "Gdańsk",
+        "Szczecin": "Szczecin",
+        "Bydgoszcz": "Bydgoszcz",
+        "Lublin": "Lublin",
+        "Bialystok": "Białystok",
+        "Katowice": "Katowice",
+        "Rzeszow": "Rzeszów",
+        "Torun": "Toruń"
+    },
+    "events": {
+        "academic": "Forum doskonałości akademickiej"
+    },
     "footer": {
         "social_title": "Media społecznościowe",
         "title": "Możesz także polubił:",

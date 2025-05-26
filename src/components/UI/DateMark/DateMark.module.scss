@@ -1,0 +1,10 @@
+.date {
+  font-family: "Roboto";
+  font-weight: 700;
+
+  @include fluid-type(768px, 1920px, 8px, 20px);
+}
+
+.point {
+  margin: 0 5px;
+}

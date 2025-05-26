@@ -1,0 +1,4 @@
+.title {
+  color: #2e2e27;
+  @include fluid-type(768px, 1920px, 24px, 60px);
+}
