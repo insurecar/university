@@ -1,6 +1,6 @@
 import styles from "./EventCard.module.scss";
 import First from "../../../../assets/EventsIcons/First.svg?react";
-import { Title, DateMark } from "../../../UI";
+import { Title, DateMark, Text } from "../../../UI";
 
 export const EventCard = () => {
   return (
@@ -11,15 +11,15 @@ export const EventCard = () => {
       <div className={styles.description}>
         <DateMark date="11.05.2025" location="Lodz" />
         <Title text="Academic Excellence Forum" />
-        <div className={styles.text}>
-          A summit bringing together experts from across Europe interested in AI
+        <Text
+          text="  A summit bringing together experts from across Europe interested in AI
           and supercomputing. A summit bringing together experts from across
           Europe interested in AI and supercomputing. A summit bringing together
           experts from across Europe interested in AI and supercomputing. A
           summit bringing together experts from across Europe interested in AI
           and supercomputing. A summit bringing together experts from across
-          Europe interested in AI and supercomputing.
-        </div>
+          Europe interested in AI and supercomputing."
+        />
       </div>
     </li>
   );

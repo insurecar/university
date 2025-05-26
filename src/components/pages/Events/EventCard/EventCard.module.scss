@@ -42,21 +42,6 @@
   @include fluid-size(gap, 768px, 1920px, 10px, 24px);
   @include fluid-size(width, 768px, 1920px, 306px, 765px);
 
-  .date {
-    font-weight: 700;
-
-    @include fluid-type(768px, 1920px, 8px, 20px);
-  }
-
-  .title {
-    font-weight: 400;
-    @include fluid-type(768px, 1920px, 24px, 60px);
-  }
-
-  .text {
-    @include fluid-type(768px, 1920px, 10px, 24px);
-  }
-
   @media (max-width: 768px) {
     @include fluid-size(width, 320px, 768px, 300px, 700px);
     @include fluid-size(height, 320px, 768px, 144px, 360px);
