@@ -76,6 +76,10 @@
         "Torun": "Toruń"
     },
     "events": {
+        "title": "Wydarzenia",
+        "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
+        "titleUpcoming": "Nadchodzące",
+        "titlePast": "Przeszłość",
         "academic": "Forum doskonałości akademickiej"
     },
     "footer": {

@@ -1,0 +1,6 @@
+.subtitle {
+  font-family: "Roboto";
+
+  @include fluid-type(768px, 1920px, 8px, 20px);
+  @include fluid-size("margin-top", 320px, 1920px, 10px, 24px);
+}

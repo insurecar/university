@@ -76,6 +76,10 @@
     "Torun": "Torun"
   },
   "events": {
+    "title": "Events",
+    "subtitle": "Join us for future events or revisit the highlights of those past – together, we make each event special!",
+    "titleUpcoming": "Upcoming",
+    "titlePast": "Past",
     "academic": "Academic Excellence Forum"
   },
   "footer": {

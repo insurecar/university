@@ -9,7 +9,7 @@ export const App = () => {
       <main className={styles.main}>
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
