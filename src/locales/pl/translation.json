@@ -60,6 +60,28 @@
         "10": "Listopad",
         "11": "Grudzień"
     },
+    "locations": {
+        "Warsaw": "Warszawa",
+        "Krakow": "Kraków",
+        "Lodz": "Łódź",
+        "Wroclaw": "Wrocław",
+        "Poznan": "Poznań",
+        "Gdansk": "Gdańsk",
+        "Szczecin": "Szczecin",
+        "Bydgoszcz": "Bydgoszcz",
+        "Lublin": "Lublin",
+        "Bialystok": "Białystok",
+        "Katowice": "Katowice",
+        "Rzeszow": "Rzeszów",
+        "Torun": "Toruń"
+    },
+    "events": {
+        "title": "Wydarzenia",
+        "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
+        "titleUpcoming": "Nadchodzące",
+        "titlePast": "Przeszłość",
+        "academic": "Forum doskonałości akademickiej"
+    },
     "footer": {
         "social_title": "Media społecznościowe",
         "title": "Możesz także polubił:",

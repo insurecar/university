@@ -1,0 +1,46 @@
+.eventCard {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto";
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    @include fluid-size(gap, 320px, 768px, 10px, 20px);
+  }
+}
+
+.photo {
+  @include fluid-size(width, 768px, 1920px, 271px, 678px);
+  @include fluid-size(height, 768px, 1920px, 240px, 601px);
+
+  .photoIcon {
+    width: 100%;
+    height: auto;
+    max-width: 678px;
+    min-width: 271px;
+
+    @media (max-width: 768px) {
+      max-width: 406px;
+      min-width: 162px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    @include fluid-size(width, 320px, 768px, 162px, 406px);
+    @include fluid-size(height, 320px, 768px, 144px, 360px);
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+
+  @include fluid-size(gap, 768px, 1920px, 10px, 24px);
+  @include fluid-size(width, 768px, 1920px, 306px, 765px);
+
+  @media (max-width: 768px) {
+    @include fluid-size(width, 320px, 768px, 300px, 700px);
+    // @include fluid-size(height, 320px, 768px, 144px, 360px);
+  }
+}

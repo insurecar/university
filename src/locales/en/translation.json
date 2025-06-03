@@ -60,6 +60,28 @@
     "10": "November",
     "11": "December"
   },
+  "locations": {
+    "Warsaw": "Warsaw",
+    "Krakow": "Krakow",
+    "Lodz": "Lodz",
+    "Wroclaw": "Wroclaw",
+    "Poznan": "Poznan",
+    "Gdansk": "Gdansk",
+    "Szczecin": "Szczecin",
+    "Bydgoszcz": "Bydgoszcz",
+    "Lublin": "Lublin",
+    "Bialystok": "Bialystok",
+    "Katowice": "Katowice",
+    "Rzeszow": "Rzeszow",
+    "Torun": "Torun"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join us for future events or revisit the highlights of those past – together, we make each event special!",
+    "titleUpcoming": "Upcoming",
+    "titlePast": "Past",
+    "academic": "Academic Excellence Forum"
+  },
   "footer": {
     "social_title": "Social Media",
     "title": "You may also like:",

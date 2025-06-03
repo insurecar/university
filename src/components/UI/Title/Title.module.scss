@@ -1,0 +1,6 @@
+.title {
+  color: #2e2e27;
+  font-family: "Roboto";
+
+  @include fluid-type(768px, 1920px, 24px, 60px);
+}
