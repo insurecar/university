@@ -1,6 +1,6 @@
 import { Intro, Jubilee, EventSlider } from "./";
 
-export const Home = () => {
+export const HomeComponent = () => {
   return (
     <>
       <Intro />
