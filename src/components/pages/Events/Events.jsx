@@ -29,7 +29,7 @@ const upComing = [
   },
 ];
 
-export const Events = () => {
+export const EventsComponent = () => {
   return (
     <div className={styles.events}>
       <Title text="events.title" className={styles.center} />

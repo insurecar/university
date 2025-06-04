@@ -1,5 +1,5 @@
 import styles from "./Alumni.module.scss";
 
-export const Alumni = () => {
+export const AlumniComponent = () => {
   return <div>Alumni</div>;
 };

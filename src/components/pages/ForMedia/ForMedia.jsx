@@ -1,5 +1,5 @@
 import styles from "./ForMedia.module.scss";
 
-export const ForMedia = () => {
+export const ForMediaComponent = () => {
   return <div>ForMedia</div>;
 };

@@ -1,5 +1,5 @@
 import styles from "./Team.module.scss";
 
-export const Team = () => {
+export const TeamComponent = () => {
   return <div>Team</div>;
 };
