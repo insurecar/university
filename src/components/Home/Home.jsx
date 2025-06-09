@@ -1,4 +1,4 @@
-import { Intro, Jubilee, EventSlider } from "./";
+import { Intro, Jubilee, EventSlider, PastEventSlider } from "./";
 
 export const HomeComponent = () => {
   return (
@@ -6,6 +6,7 @@ export const HomeComponent = () => {
       <Intro />
       <Jubilee targetDate="2026-10-12T09:00:00" />
       <EventSlider />
+      <PastEventSlider />
     </>
   );
 };
