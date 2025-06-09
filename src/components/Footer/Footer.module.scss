@@ -4,6 +4,8 @@
   @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
   @include fluid-size("padding-top", 768px, 1920px, 36px, 90px);
   @include fluid-size("padding-bottom", 768px, 1920px, 13px, 90px);
+
+  @media (max-width: 768px) { padding-left: 0; }
 }
 
 .info {
@@ -13,6 +15,11 @@
   .logo {
     @include fluid-size(width, 320px, 1920px, 112px, 225px);
     @include fluid-size(height, 320px, 1920px, 43px, 85px);
+
+    @media (max-width: 768px) {
+      @include fluid-size(width, 320px, 768px, 150px, 225px);
+      @include fluid-size(height, 320px, 768px, 57px, 85px);
+    }
   }
 
   .logoIcon {
@@ -55,6 +62,8 @@
       height: auto;
       max-width: 26px;
     }
+
+    @media (max-width: 768px) { text-align: center; }
   }
 
   .likeUs {
@@ -72,12 +81,19 @@
 
       @include fluid-type(768px, 1920px, 12px, 22px);
     }
+    
+    @media (max-width: 768px) { 
+      text-align: center;
+
+      & > Button { align-self: stretch; }
+    }
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     // flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    gap: 40px;
   }
 }
 
@@ -87,4 +103,9 @@
   font-weight: 700;
 
   @include fluid-type(768px, 1920px, 8px, 14px);
+  
+  @media (max-width: 768px) { 
+    margin-top: 20px;
+    text-align: center;
+  }
 }
