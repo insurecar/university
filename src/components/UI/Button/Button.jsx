@@ -25,7 +25,7 @@ export const Button = ({ type, arrow = true, className }) => {
     <button className={button[type].className}>
       <span>{t(button[type].text)}</span>
       {arrow && (
-        <span>
+        <span className={styles.arrowIcon}>
           <ArrowIcon />
         </span>
       )}
