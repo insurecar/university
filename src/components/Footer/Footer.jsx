@@ -38,8 +38,10 @@ export const Footer = () => {
 
         <div className={styles.likeUs}>
           <div className={styles.likeUsTitle}>{t("footer.title")}</div>
-          <Button type="university" />
-          <Button type="website" />
+          <div className={styles.likeUs__btns}>
+            <Button type="university" />
+            <Button type="website" />
+          </div>
         </div>
       </div>
 

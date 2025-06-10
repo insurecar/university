@@ -53,7 +53,8 @@
 
       @media (max-width: 768px) {
         margin-top: 16px;
-        gap: 25px;
+        display: flex;
+        @include fluid-size(gap, 320px, 768px, 20px, 30px);
       }
     }
 
@@ -127,11 +128,19 @@
 
       @include fluid-type(768px, 1920px, 12px, 22px);
     }
+
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     
     @media (max-width: 768px) { 
       text-align: center;
 
-      & > Button { align-self: stretch; }
+      &__btns {
+        flex-direction: row;
+      }
     }
   }
 
