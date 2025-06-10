@@ -71,6 +71,10 @@
           opacity: 1;
           visibility: visible;
         }
+
+        .blueHover { color: #1da1f2; }
+        .purpleHover { color: #833ab4; }
+        .redHover { color: red; }
       }
 
       @include fluid-size(width, 768px, 1920px, 15px, 26px);
@@ -107,10 +111,6 @@
         transform: scale(1.2);
       }
     }
-
-    .blueHover:hover { color: #1da1f2; }
-    .purpleHover:hover { color: #833ab4; }
-    .redHover:hover { color: red; }
   }
 
   .likeUs {
