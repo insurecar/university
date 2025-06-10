@@ -43,7 +43,7 @@
 
     .socialWrapperOfIcons {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 30px;
       list-style: none;
@@ -70,10 +70,18 @@
     }
 
     .socialIcon {
+      color: white;
       width: 100%;
       height: auto;
       max-width: 26px;
+      transition: all .2s;
+
+      &:hover { transform: scale(1.2); }
     }
+
+    .blueHover:hover { color: #1da1f2; }
+    .purpleHover:hover { color: #833ab4; }
+    .redHover:hover { color: red; }
   }
 
   .likeUs {
