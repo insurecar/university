@@ -59,6 +59,18 @@
 
     .socialIconWrap {
       cursor: pointer;
+      position: relative;
+
+      &:hover {
+        .socialIcon {
+          transform: scale(1.2);
+        }
+
+        .socialIcon__tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
 
       @include fluid-size(width, 768px, 1920px, 15px, 26px);
       @include fluid-size(height, 768px, 1920px, 15px, 26px);
@@ -76,7 +88,23 @@
       max-width: 26px;
       transition: all .2s;
 
-      &:hover { transform: scale(1.2); }
+      &__tooltip {
+        position: absolute;
+        padding: 4px;
+        font-family: 'Roboto';
+        font-size: 12px;
+        top: 150%;
+        left: 50%;
+        opacity: 0;
+        z-index: 1000;
+        visibility: hidden;
+        background-color: #93c296;
+        transition: all 0.3s ease 1s;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     .blueHover:hover { color: #1da1f2; }

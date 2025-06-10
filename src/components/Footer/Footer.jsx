@@ -30,6 +30,7 @@ export const Footer = () => {
                 > 
                   <Icon className={`${styles.socialIcon} ${styles[className]}`} title={alt} />
                 </a>
+                <span className={styles.socialIcon__tooltip}>{alt}</span>
               </li>
             ))}
           </ul>
