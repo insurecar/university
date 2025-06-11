@@ -6,7 +6,32 @@ import { socialIcons } from "../../assets/SocialMediaIcons";
 import { Button } from "../UI";
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+  console.log("TRANSLATE_________", language);
+
+  const are = {
+    id: "7f3a5a18-5e9b-4311-8599-abc123abc123",
+    date: "2020-07-30T18:00:00.000Z",
+    isFinished: true,
+    pl: {
+      title: "Dni Historii",
+      shortDescription: "Święto miasta z rekonstrukcjami historycznymi.",
+      longDescription: "Wydarzenie poświęcone dawnym czasom Gdańska...",
+      location: "Gdańsk, Polska",
+    },
+    en: {
+      title: "Dni Historii",
+      shortDescription: "A summit bringing together experts from across Eur.",
+      longDescription: "A summit bringing together experts from across Eur.",
+      location: "Gdańsk, Polska",
+    },
+    images: "https://storage.googleapis.com/your-bucket/events/bg.jpg",
+  };
+
+  console.log("TRANSLATIONS++++++", are[language]);
 
   return (
     <footer className={styles.footer}>
