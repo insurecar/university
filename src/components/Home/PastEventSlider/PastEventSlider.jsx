@@ -162,6 +162,11 @@ const events = [
 export const PastEventSlider = () => {
   const [start, setStart] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+  const lang = i18n.language === "pl" ? pl : enUS;
+  const isPl = i18n.language === "pl";
+  const formatStr = isPl ? "d MMMM yyyy" : "MMMM d, yyyy";
 
   useEffect(() => {
     const handleResize = () => {
@@ -194,8 +199,8 @@ export const PastEventSlider = () => {
 
   return (
     <section className={styles.section} id="past-events">
-      <h2 className={styles.heading}>Past events</h2>
-      <p className={styles.subheading}>Explore events</p>
+      <h2 className={styles.heading}>{t("pastEvents.heading")}</h2>
+      <p className={styles.subheading}>{t("pastEvents.subheading")}</p>
       <div className={styles.sliderWrapper}>
         <div className={styles.slider}>
           {visibleEvents.map((event) => (
@@ -207,7 +212,7 @@ export const PastEventSlider = () => {
               />
               <div className={styles.cardOverlay}>
                 <div className={styles.date}>
-                  {format(parseISO(event.date), "MMMM d, yyyy")}
+                  {format(parseISO(event.date), formatStr, { locale: lang })}
                 </div>
                 <div className={styles.info}>
                   <p className={styles.title}>{event.title}</p>
