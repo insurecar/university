@@ -28,25 +28,48 @@
 }
 
 .sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   padding: 40px 0;
   overflow: hidden;
 }
 
 .slider {
-  display: flex;
+  box-sizing: border-box;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  flex-wrap: nowrap;
-  max-width: 100%;
+  overflow: hidden;
+  @include fluid-size(padding-left, 320px, 1920px, 20px, 60px);
+  @include fluid-size(padding-right, 320px, 1920px, 20px, 60px);
 }
 
 .card {
-  position: relative;
-  height: 448px;
-  max-height: 100%;
   width: 384px;
+  height: 448px;
   border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1920px) {
+    flex: 0 0 calc(((100% - 32px) / 3));
+    max-width: 384px;
+  }
+
+  @media (max-width: 1023px) {
+    flex: 0 0 calc((100% - 32px) / 2);
+    max-width: 384px;
+  }
+
+  @media (max-width: 600px) {
+    flex: 0 0 100%;
+    max-width: 384px;
+    width: 100%;
+  }
+  @include fluid-size(height, 320px, 768px, 300px, 448px);
 }
 
 .cardImage,
