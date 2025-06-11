@@ -20,31 +20,11 @@
   },
   "jubilee": {
     "units": {
-      "week": [
-        "week",
-        "weeks",
-        "weeks"
-      ],
-      "day": [
-        "day",
-        "days",
-        "days"
-      ],
-      "hour": [
-        "hour",
-        "hours",
-        "hours"
-      ],
-      "minute": [
-        "minute",
-        "minutes",
-        "minutes"
-      ],
-      "second": [
-        "second",
-        "seconds",
-        "seconds"
-      ]
+      "week": ["week", "weeks", "weeks"],
+      "day": ["day", "days", "days"],
+      "hour": ["hour", "hours", "hours"],
+      "minute": ["minute", "minutes", "minutes"],
+      "second": ["second", "seconds", "seconds"]
     },
     "title": "Jubilee | ",
     "title1": "October 12, 2026"
@@ -91,5 +71,10 @@
     "university-gadgets": "University Gadgets",
     "website": "Our Website",
     "rights": "© 2025 | UEP | All Rights Reserved"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "subtitle": "Stay updated with all jubilee events through our calendar",
+    "more": "More details"
   }
 }

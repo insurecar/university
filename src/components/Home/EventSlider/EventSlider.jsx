@@ -3,18 +3,28 @@ import { format, parseISO } from "date-fns";
 import { pl, enUS } from "date-fns/locale";
 import { useTranslation } from "react-i18next";
 import styles from "./EventSlider.module.scss";
+import arrowRightIcon from "../../../assets/ArrowRightIcon.svg";
 
 const events = [
   {
     date: "2025-05-01",
     title: "AI Kickoff",
-    description: "Opening summit with keynote speakers.",
+    description:
+      "A summit bringing together experts from across Europe interested in AI and supercomputing.",
+    link: "#",
+  },
+  {
+    date: "2025-05-02",
+    title: "AI Kickoff",
+    description:
+      "A summit bringing together experts from across Europe interested in AI and supercomputing.",
     link: "#",
   },
   {
     date: "2025-05-03",
     title: "Quantum Day",
-    description: "Exploring quantum computing.",
+    description:
+      "A summit bringing together experts from across Europe interested in AI and supercomputing.",
     link: "#",
   },
   {
@@ -145,9 +155,16 @@ const getMonthTitle = (lang, events) => {
   return months.join("/");
 };
 
+const capitalizeMonths = (input) => {
+  return input
+    .split("/")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join("/");
+};
+
 export const EventSlider = () => {
   const [start, setStart] = useState(0);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const lang = i18n.language === "pl" ? "pl" : "en";
   const itemsPerPage = 6;
 
@@ -167,17 +184,24 @@ export const EventSlider = () => {
 
   return (
     <div className={styles.sliderWrapper}>
-      <h2 className={styles.title}>{getMonthTitle(lang, visibleEvents)}</h2>
+      <h2 className={styles.title}>
+        {capitalizeMonths(getMonthTitle(lang, visibleEvents))}
+      </h2>
+      <div className={styles.line}></div>
       <div className={styles.slider}>
         {visibleEvents.map((event) => (
           <div className={styles.card} key={event.date}>
             <div className={styles.day}>
               {format(parseISO(event.date), "d")}
             </div>
-            <div className={styles.title}>{event.title}</div>
             <div className={styles.desc}>{event.description}</div>
             <a className={styles.link} href={event.link}>
-              More details →
+              {t("calendar.more")}
+              <img
+                src={arrowRightIcon}
+                alt="Arrow right"
+                className={styles.icon}
+              />
             </a>
           </div>
         ))}

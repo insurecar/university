@@ -1,95 +1,80 @@
 {
-    "header": {
-        "events": "Wydarzenia",
-        "alumni": "Absolwenci",
-        "publications": "Publikacje",
-        "team": "Zespół",
-        "partnership": "Współpraca",
-        "partners": "Wzmacniacz",
-        "for-media": "Dla mediów"
+  "header": {
+    "events": "Wydarzenia",
+    "alumni": "Absolwenci",
+    "publications": "Publikacje",
+    "team": "Zespół",
+    "partnership": "Współpraca",
+    "partners": "Wzmacniacz",
+    "for-media": "Dla mediów"
+  },
+  "tab": {
+    "tab-title": "O uniwersytecie"
+  },
+  "search": "Szukaj",
+  "home": {
+    "title": "100 lat doskonałości - świętowanie naszej dziedzictwa, kształtowanie przyszłości!",
+    "text": "Drodzy Szanowni Goście, Kadra, Studenci i Absolwenci, Z wielką radością i głęboką wdzięcznością witam Was na tej doniosłej okazji – Jubileuszowej Obchodach [nazwa instytucji]. Ten kamień milowy jest świadectwem poświęcenia, osiągnięć i trwałego dziedzictwa naszej społeczności akademickiej.",
+    "position": "Rektor uniwersytecki",
+    "btn": "Przeglądaj wydarzenia jubileuszowe"
+  },
+  "jubilee": {
+    "units": {
+      "week": ["tydzień", "tygodnie", "tygodni"],
+      "day": ["dzień", "dni", "dni"],
+      "hour": ["godzina", "godziny", "godzin"],
+      "minute": ["minuta", "minuty", "minut"],
+      "second": ["sekunda", "sekundy", "sekund"]
     },
-    "tab": {
-        "tab-title": "O uniwersytecie"
-    },
-    "search": "Szukaj",
-    "home": {
-        "title": "100 lat doskonałości - świętowanie naszej dziedzictwa, kształtowanie przyszłości!",
-        "text": "Drodzy Szanowni Goście, Kadra, Studenci i Absolwenci, Z wielką radością i głęboką wdzięcznością witam Was na tej doniosłej okazji – Jubileuszowej Obchodach [nazwa instytucji]. Ten kamień milowy jest świadectwem poświęcenia, osiągnięć i trwałego dziedzictwa naszej społeczności akademickiej.",
-        "position": "Rektor uniwersytecki",
-        "btn": "Przeglądaj wydarzenia jubileuszowe"
-    },
-    "jubilee": {
-        "units": {
-            "week": [
-                "tydzień",
-                "tygodnie",
-                "tygodni"
-            ],
-            "day": [
-                "dzień",
-                "dni",
-                "dni"
-            ],
-            "hour": [
-                "godzina",
-                "godziny",
-                "godzin"
-            ],
-            "minute": [
-                "minuta",
-                "minuty",
-                "minut"
-            ],
-            "second": [
-                "sekunda",
-                "sekundy",
-                "sekund"
-            ]
-        },
-        "title": "Jubileusz | ",
-        "title1": "12 października 2026"
-    },
-    "months": {
-        "0": "Styczeń",
-        "1": "Luty",
-        "2": "Marzec",
-        "3": "Kwiecień",
-        "4": "Maj",
-        "5": "Czerwiec",
-        "6": "Lipiec",
-        "7": "Sierpień",
-        "8": "Wrzesień",
-        "9": "Październik",
-        "10": "Listopad",
-        "11": "Grudzień"
-    },
-    "locations": {
-        "Warsaw": "Warszawa",
-        "Krakow": "Kraków",
-        "Lodz": "Łódź",
-        "Wroclaw": "Wrocław",
-        "Poznan": "Poznań",
-        "Gdansk": "Gdańsk",
-        "Szczecin": "Szczecin",
-        "Bydgoszcz": "Bydgoszcz",
-        "Lublin": "Lublin",
-        "Bialystok": "Białystok",
-        "Katowice": "Katowice",
-        "Rzeszow": "Rzeszów",
-        "Torun": "Toruń"
-    },
-    "events": {
-        "title": "Wydarzenia",
-        "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
-        "titleUpcoming": "Nadchodzące",
-        "titlePast": "Przeszłość",
-        "academic": "Forum doskonałości akademickiej"
-    },
-    "footer": {
-        "social_title": "Media społecznościowe",
-        "title": "Możesz także polubił:",
-        "university-gadgets": "Gadżety uniwersyteckie",
-        "website": "Nasza strona internetowa",
-        "rights": "© 2025 | UEP | Wszelkie prawa zastrzeżone"
-    }
+    "title": "Jubileusz | ",
+    "title1": "12 października 2026"
+  },
+  "months": {
+    "0": "Styczeń",
+    "1": "Luty",
+    "2": "Marzec",
+    "3": "Kwiecień",
+    "4": "Maj",
+    "5": "Czerwiec",
+    "6": "Lipiec",
+    "7": "Sierpień",
+    "8": "Wrzesień",
+    "9": "Październik",
+    "10": "Listopad",
+    "11": "Grudzień"
+  },
+  "locations": {
+    "Warsaw": "Warszawa",
+    "Krakow": "Kraków",
+    "Lodz": "Łódź",
+    "Wroclaw": "Wrocław",
+    "Poznan": "Poznań",
+    "Gdansk": "Gdańsk",
+    "Szczecin": "Szczecin",
+    "Bydgoszcz": "Bydgoszcz",
+    "Lublin": "Lublin",
+    "Bialystok": "Białystok",
+    "Katowice": "Katowice",
+    "Rzeszow": "Rzeszów",
+    "Torun": "Toruń"
+  },
+  "events": {
+    "title": "Wydarzenia",
+    "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
+    "titleUpcoming": "Nadchodzące",
+    "titlePast": "Przeszłość",
+    "academic": "Forum doskonałości akademickiej"
+  },
+  "footer": {
+    "social_title": "Media społecznościowe",
+    "title": "Możesz także polubił:",
+    "university-gadgets": "Gadżety uniwersyteckie",
+    "website": "Nasza strona internetowa",
+    "rights": "© 2025 | UEP | Wszelkie prawa zastrzeżone"
+  },
+  "calendar": {
+    "title": "Kalendarz",
+    "subtitle": "Bądź na bieżąco ze wszystkimi wydarzeniami jubileuszowymi dzięki naszemu kalendarzowi",
+    "more": "Więcej szczegółów"
+  }
 }
