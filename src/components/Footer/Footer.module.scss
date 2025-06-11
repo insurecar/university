@@ -4,6 +4,8 @@
   @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
   @include fluid-size("padding-top", 768px, 1920px, 36px, 90px);
   @include fluid-size("padding-bottom", 768px, 1920px, 13px, 90px);
+
+  @media (max-width: 768px) { padding-left: 0; }
 }
 
 .info {
@@ -13,6 +15,11 @@
   .logo {
     @include fluid-size(width, 320px, 1920px, 112px, 225px);
     @include fluid-size(height, 320px, 1920px, 43px, 85px);
+
+    @media (max-width: 768px) {
+      @include fluid-size(width, 320px, 768px, 150px, 225px);
+      @include fluid-size(height, 320px, 768px, 57px, 85px);
+    }
   }
 
   .logoIcon {
@@ -30,30 +37,79 @@
       font-weight: 700;
 
       @include fluid-type(768px, 1920px, 12px, 22px);
+
+      @media (max-width: 768px) { text-align: center; }
     }
 
     .socialWrapperOfIcons {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 30px;
       list-style: none;
 
       @include fluid-size(gap, 768px, 1920px, 13px, 33px);
       @include fluid-size("margin-top", 768px, 1920px, 8px, 16px);
+
+      @media (max-width: 768px) {
+        margin-top: 16px;
+        display: flex;
+        @include fluid-size(gap, 320px, 768px, 20px, 30px);
+      }
     }
 
     .socialIconWrap {
       cursor: pointer;
+      position: relative;
+
+      &:hover {
+        .socialIcon {
+          transform: scale(1.2);
+        }
+
+        .socialIcon__tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .blueHover { color: #1da1f2; }
+        .purpleHover { color: #833ab4; }
+        .redHover { color: red; }
+      }
 
       @include fluid-size(width, 768px, 1920px, 15px, 26px);
       @include fluid-size(height, 768px, 1920px, 15px, 26px);
+
+      @media (max-width: 768px) {
+        width: 20px;
+        height: auto;
+      }
     }
 
     .socialIcon {
+      color: white;
       width: 100%;
       height: auto;
       max-width: 26px;
+      transition: all .2s;
+
+      &__tooltip {
+        position: absolute;
+        padding: 4px;
+        font-family: 'Roboto';
+        font-size: 12px;
+        top: 150%;
+        left: 50%;
+        opacity: 0;
+        z-index: 1000;
+        visibility: hidden;
+        background-color: #93c296;
+        transition: all 0.3s ease 1s;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -72,12 +128,27 @@
 
       @include fluid-type(768px, 1920px, 12px, 22px);
     }
+
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    @media (max-width: 768px) { 
+      text-align: center;
+
+      &__btns {
+        flex-direction: row;
+      }
+    }
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     // flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    gap: 40px;
   }
 }
 
@@ -87,4 +158,9 @@
   font-weight: 700;
 
   @include fluid-type(768px, 1920px, 8px, 14px);
+  
+  @media (max-width: 768px) { 
+    margin-top: 20px;
+    text-align: center;
+  }
 }
