@@ -1,0 +1,38 @@
+.calendar {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  @include fluid-size("padding-top", 768px, 1920px, 40px, 100px);
+  @include fluid-size("padding-bottom", 768px, 1920px, 40px, 100px);
+  @include fluid-size("padding-left", 768px, 1920px, 10px, 20px);
+  @include fluid-size("padding-right", 768px, 1920px, 10px, 20px);
+}
+
+.description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @include fluid-size("gap", 768px, 1920px, 10px, 24px);
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 400;
+  color: #2e2e27;
+  letter-spacing: -1px;
+
+  @include fluid-type(768px, 1920px, 22px, 64px);
+}
+
+.subtitle {
+  font-family: "Lato";
+  color: #2e2e27;
+
+  @include fluid-size("margin-top", 768px, 1920px, 8px, 10px);
+  @include fluid-type(768px, 1920px, 16px, 24px);
+}
