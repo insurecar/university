@@ -1,26 +1,28 @@
 .section {
-  @include fluid-size(padding-top, 768px, 1920px, 30px, 90px);
-  @include fluid-size(padding-bottom, 768px, 1920px, 30px, 90px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
-
   background-color: #f9f8f1;
+
+  @include fluid-size(padding-top, 768px, 1920px, 30px, 90px);
+  @include fluid-size(padding-bottom, 768px, 1920px, 30px, 90px);
 }
 
 .heading {
   font-size: 64px;
   font-weight: 400;
-  @include fluid-type(320px, 1024px, 24px, 64px);
   margin-bottom: 24px;
+
+  @include fluid-type(320px, 1024px, 24px, 64px);
   @include fluid-size(margin-bottom, 320px, 1024px, 12px, 24px);
 }
 
 .subheading {
   font-size: 24px;
   font-weight: 300;
+
   @include fluid-type(320px, 1024px, 16px, 24px);
 }
 
@@ -38,33 +40,52 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   height: 448px;
   max-height: 100%;
   width: 384px;
+  border-radius: 16px;
+}
+
+.cardImage,
+.cardOverlay {
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cardOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 24px;
   font-size: 18px;
+  background: #2e2e1f99;
   color: white;
-  background-image: url("./img.png");
-  background-size: cover;
-  border-radius: 16px;
+  z-index: 2;
+}
 
-  .date {
-  }
-  .title {
-    @include fluid-type(768px, 1920px, 18px, 24px);
-  }
-  .desc {
-    font-weight: 300;
-    margin-top: 12px;
-    margin-bottom: 24px;
-  }
-  .link {
-    text-decoration: none;
-    color: white;
-  }
+.title {
+  @include fluid-type(768px, 1920px, 18px, 24px);
+}
+.desc {
+  font-weight: 300;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.link {
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
 }
 
 .navButtons {
