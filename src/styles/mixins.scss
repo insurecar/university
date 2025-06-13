@@ -45,6 +45,21 @@
     font-size: $max-font-size;
   }
 }
+
+@function fluid-value($min-vw, $max-vw, $min-size, $max-size) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-size);
+  $u4: math.unit($max-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    @return calc(
+      #{$min-size} + #{strip-unit($max-size - $min-size)} *
+        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+    );
+  }
+}
+
 @mixin response($prefix, $media) {
   @media only screen and (#{$prefix}-width: #{$media}px) {
     @content;

@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fluid-size(gap, 320px, 1920px, 10px, 20px);
+    text-align: center;
+    height: 100%;
+}
+
+.imageContainer {
+    @include fluid-size("height", 320px, 1920px, 50px, 100px);
+    @include fluid-size("width", 320px, 1920px, 50px, 100px);
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.name {
+    @include fluid-type(320px, 1920px, 13px, 17px);
+    font-weight: 700;
+}
+
+.title {
+    @include fluid-type(320px, 1920px, 12px, 14px);
+    font-weight: 300;
+}
