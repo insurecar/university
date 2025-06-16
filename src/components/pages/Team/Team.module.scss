@@ -1,0 +1,91 @@
+.team {
+    background-color: $base-color;
+
+    font-family: "Lato";
+    font-size: 64px;
+    font-weight: 400;
+    color: #2e2e27;
+
+    @include fluid-size("padding-top", 320px, 1920px, 15px, 90px);
+    @include fluid-size("padding-bottom", 320px, 1920px, 25px, 140px);
+    @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+    @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
+
+    @media (max-width: 768px) {
+        @include fluid-size("padding-left", 320px, 768px, 10px, 15px);
+        @include fluid-size("padding-right", 320px, 768px, 10px, 15px);
+    }
+
+    .center { text-align: center; }
+}
+
+.title {
+    margin-bottom: 24px;
+}
+
+.committees {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    .committeeName {
+        @include fluid-type(320px, 1920px, 16px, 40px);
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 40px;
+        margin-bottom: 45px;
+    }
+}
+
+.subcategory {
+    @include fluid-size("margin-bottom", 320px, 1920px, 37px, 75px);
+
+    &:not(:last-child) {
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: #74746a;
+            width: 50px;
+            @include fluid-size("margin-top", 320px, 1920px, 37px, 75px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .subcategoryName {
+        @include fluid-size("margin-bottom", 320px, 1920px, 15px, 50px);
+        text-align: center;
+        font-weight: 300;
+        @include fluid-type(320px, 1920px, 14px, 30px);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, fluid-value(320px, 1920px, 100px, 200px));
+    @include fluid-size(gap, 768px, 1920px, 30px, 50px);
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        column-gap: 0px;
+        row-gap: 40px;
+    }
+}
+
+.grey {
+    color: #74746a;
+}
+
+.rightHeader {
+    text-align: right;
+}
+
+.line {
+    height: 2px;
+    background-color: black;
+    width: 50px;
+    margin: 0 auto;
+}
