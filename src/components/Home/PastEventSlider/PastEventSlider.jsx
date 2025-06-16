@@ -1,85 +1,77 @@
-import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
+import styles from "./PastEventSlider.module.scss";
+import { useTranslation } from "react-i18next";
 import { format, parseISO } from "date-fns";
 import { pl, enUS } from "date-fns/locale";
-import { useTranslation } from "react-i18next";
-import styles from "./PastEventSlider.module.scss";
 import { events } from "./pastEvents";
 
 export const PastEventSlider = () => {
-  const [start, setStart] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
   const { t, i18n } = useTranslation();
-  const lang = i18n.language === "pl" ? pl : enUS;
   const isPl = i18n.language === "pl";
+  const locale = isPl ? pl : enUS;
   const formatStr = isPl ? "d MMMM yyyy" : "MMMM d, yyyy";
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 600) {
-        setItemsPerPage(1);
-      } else if (window.innerWidth < 1024) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(3);
-      }
-      document.documentElement.style.setProperty(
-        "--items-per-page",
-        itemsPerPage
-      );
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const next = () => {
-    if (start + itemsPerPage < events.length) {
-      setStart(start + itemsPerPage);
-    }
-  };
-
-  const prev = () => {
-    if (start - itemsPerPage >= 0) {
-      setStart(start - itemsPerPage);
-    }
-  };
-
-  const visibleEvents = events.slice(start, start + itemsPerPage);
 
   return (
     <section className={styles.section} id="past-events">
       <h2 className={styles.heading}>{t("pastEvents.heading")}</h2>
       <p className={styles.subheading}>{t("pastEvents.subheading")}</p>
+
       <div className={styles.sliderWrapper}>
-        <div className={styles.slider}>
-          {visibleEvents.map((event) => (
-            <div className={styles.card} key={event.date}>
-              <img
-                src={event.img_url}
-                alt="Photo from the event"
-                className={styles.cardImage}
-              />
-              <div className={styles.cardOverlay}>
-                <div className={styles.date}>
-                  {format(parseISO(event.date), formatStr, { locale: lang })}
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          loop={false}
+          centeredSlides={false}
+          spaceBetween={32}
+          breakpoints={{
+            480: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className={styles.swiper}
+          aria-roledescription="carousel"
+        >
+          {events.map((event) => (
+            <SwiperSlide key={`${event.date}-${event.title}`}>
+              <article className={styles.card}>
+                <img
+                  src={event.img_url}
+                  alt="Event"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardOverlay}>
+                  <div className={styles.date}>
+                    {format(parseISO(event.date), formatStr, { locale })}
+                  </div>
+                  <div className={styles.info}>
+                    <p className={styles.title}>{event.title}</p>
+                    <p className={styles.desc}>{event.description}</p>
+                    <a className={styles.link} href={event.link}>
+                      More details →
+                    </a>
+                  </div>
                 </div>
-                <div className={styles.info}>
-                  <p className={styles.title}>{event.title}</p>
-                  <p className={styles.desc}>{event.description}</p>
-                  <a className={styles.link} href={event.link}>
-                    More details →
-                  </a>
-                </div>
-              </div>
-            </div>
+              </article>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+
         <div className={styles.navButtons}>
-          <button onClick={prev} aria-label="Previous events">
-            &larr;
+          <button
+            className={`custom-prev ${styles.button}`}
+            aria-label="Previous"
+          >
+            ←
           </button>
-          <button onClick={next} aria-label="Next events">
-            &rarr;
+          <button className={`custom-next ${styles.button}`} aria-label="Next">
+            →
           </button>
         </div>
       </div>

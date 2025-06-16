@@ -28,12 +28,23 @@
 }
 
 .sliderWrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 40px 0;
   overflow: hidden;
+  max-width: 1280px;
+
+  @media (max-width: 1023px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 384px;
+  }
 }
 
 .slider {
@@ -41,35 +52,28 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
   overflow: hidden;
   @include fluid-size(padding-left, 320px, 1920px, 20px, 60px);
   @include fluid-size(padding-right, 320px, 1920px, 20px, 60px);
 }
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+}
 
 .card {
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
   height: 448px;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
-  @media (max-width: 1920px) {
-    flex: 0 0 calc(((100% - 32px) / 3));
-    max-width: 384px;
-  }
-
-  @media (max-width: 1023px) {
-    flex: 0 0 calc((100% - 32px) / 2);
-    max-width: 384px;
-  }
-
-  @media (max-width: 600px) {
-    flex: 0 0 100%;
-    max-width: 384px;
-    width: 100%;
-  }
-  @include fluid-size(height, 320px, 768px, 300px, 448px);
+  @include fluid-size(height, 320px, 768px, 360px, 448px);
 }
 
 .cardImage,
@@ -84,19 +88,20 @@
 }
 
 .cardImage {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
 .cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
-  font-size: 18px;
-  background: #2e2e1f99;
   color: white;
-  z-index: 2;
 }
 
 .title {
@@ -116,7 +121,7 @@
 .navButtons {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 24px;
   margin-top: 64px;
 }
 
@@ -125,7 +130,7 @@
   height: 48px;
   border-radius: 50%;
   border: 1px solid #1b572c;
-  background: white;
+  background: none;
   color: #1b572c;
   cursor: pointer;
   font-size: 24px;
