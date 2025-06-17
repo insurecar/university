@@ -65,6 +65,25 @@
     "titlePast": "Past",
     "academic": "Academic Excellence Forum"
   },
+  "pastEvents": {
+    "heading": "Past events",
+    "subheading": "Explore events"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Our team is the heart of University. Together, we work hard to bring you the best service and solutions.",
+    "header1": "Organisation Team",
+    "subcategories": {
+      "marketing-and-communication": "Marketing and communication",
+      "administrative-affairs": "Administrative affairs",
+      "financial-affairs": "Financial affairs",
+      "technology-and-infrastructure": "Technology and infrastructure",
+      "business-collaboration": "Business collaboration",
+      "community-outreach": "Community outreach",
+      "student-and-doctoral-collaboration": "Student and doctoral collaboration"
+    },
+    "header2": "Honorary Committee"
+  },
   "footer": {
     "social_title": "Social Media",
     "title": "You may also like:",
