@@ -1,8 +1,8 @@
 import styles from "./Alumni.module.scss";
 import { Title, Subtitle } from "../../UI";
-import First from "../../../assets/EventsIcons/First.svg?react";
-import Second from "../../../assets/EventsIcons/Second.svg?react";
-import Third from "../../../assets/EventsIcons/Third.svg?react";
+import First from "@/assets/EventsIcons/First.svg?react";
+import Second from "@/assets/EventsIcons/Second.svg?react";
+import Third from "@/assets/EventsIcons/Third.svg?react";
 import { AlumniCard } from "./AlumniCard/AlumniCard";
 import { useState } from "react";
 import { Modal } from "../../UI/Modal/Modal";
@@ -52,6 +52,7 @@ export const AlumniComponent = () => {
             allowFullScreen
             width="100%"
             height="100%"
+            className={styles.iframe}
           />
         );
       case "video":

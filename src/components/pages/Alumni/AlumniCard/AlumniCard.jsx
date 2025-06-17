@@ -1,12 +1,12 @@
 import styles from "./AlumniCard.module.scss";
 import { Title, Text, Button } from "../../../UI";
-import PlayIcon from "../../../../assets/PlayIcon.svg?react";
+import PlayIcon from "@/assets/PlayIcon.svg?react";
 
 export const AlumniCard = ({ icon: Icon, text, name, onOpen }) => {
   return (
     <li className={styles.alumniCard}>
-      <div className={styles.photo} onClick={onOpen}>
-        <Icon className={styles.photoIcon} />
+      <div className={styles.photo}>
+        <Icon className={styles.photoImg} />
         <button className={styles.playButton} onClick={onOpen}>
           <PlayIcon className={styles.playIcon} />
         </button>

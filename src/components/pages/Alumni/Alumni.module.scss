@@ -32,14 +32,18 @@
   }
 
   .warning {
+    background: #000;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+
     @include fluid-size("font-size", 320px, 1920px, 22px, 32px);
     @include fluid-size("margin-top", 320px, 1920px, 10px, 20px);
     @include fluid-size("margin-bottom", 320px, 1920px, 10px, 20px);
     @include fluid-size("padding", 320px, 1920px, 20px, 40px);
-
-    background: rgba(0, 0, 0);
-    border-radius: 8px;
-    color: #fff;
-    text-align: center;
   }
+}
+
+.iframe {
+  border: none;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./Modal.module.scss";
-import CloseIcon from "../../../assets/CloseIcon.svg?react";
+import CloseIcon from "@/assets/CloseIcon.svg?react";
 
 export const Modal = ({ children, onClose }) => {
   const modalRef = useRef(null);
