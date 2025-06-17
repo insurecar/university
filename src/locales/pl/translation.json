@@ -68,6 +68,20 @@
   "pastEvents": {
     "heading": "Poprzednie wydarzenia",
     "subheading": "Przeglądaj wydarzenia"
+  "team": {
+    "title": "Nasz zespół",
+    "subtitle": "Nasz zespół to serce Uniwersytetu. Razem ciężko pracujemy, aby zapewnić Państwu najlepszą obsługę i rozwiązania.",
+    "header1": "Komitet Organizacyjny",
+    "subcategories": {
+      "marketing-and-communication": "Marketing i komunikowanie",
+      "administrative-affairs": "Sprawy administracyjne",
+      "financial-affairs": "Sprawy finansowe",
+      "technology-and-infrastructure": "Technologia i infrastruktura",
+      "business-collaboration": "Współpraca z biznesem",
+      "community-outreach": "Współpraca z otoczeniem",
+      "student-and-doctoral-collaboration": "Współpraca ze studentami i doktorantami"
+    },
+    "header2": "Komitet Honorowy"
   },
   "footer": {
     "social_title": "Media społecznościowe",
@@ -75,5 +89,10 @@
     "university-gadgets": "Gadżety uniwersyteckie",
     "website": "Nasza strona internetowa",
     "rights": "© 2025 | UEP | Wszelkie prawa zastrzeżone"
+  },
+  "calendar": {
+    "title": "Kalendarz",
+    "subtitle": "Bądź na bieżąco ze wszystkimi wydarzeniami jubileuszowymi dzięki naszemu kalendarzowi",
+    "more": "Więcej szczegółów"
   }
 }

@@ -12,8 +12,8 @@
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    gap: 10px;
 
+    @include fluid-size("gap", 320px, 767px, 30px, 20px);
     @include fluid-size("padding-left", 320px, 767px, 32px, 40px);
     @include fluid-size("padding-right", 320px, 767px, 32px, 40px);
   }
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
 
-  @include fluid-size("width", 768px, 1920px, 379px, 947px);
+  @include fluid-size("width", 768px, 1920px, 280px, 947px);
 
   .title {
     font-family: "Roboto";
