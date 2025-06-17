@@ -1,0 +1,45 @@
+.alumni {
+  background: $base-color;
+
+  @include fluid-size("padding-top", 320px, 1920px, 15px, 90px);
+  @include fluid-size("padding-bottom", 320px, 1920px, 25px, 140px);
+  @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+  @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
+
+  @media (max-width: 768px) {
+    @include fluid-size("padding-left", 320px, 768px, 10px, 15px);
+    @include fluid-size("padding-right", 320px, 768px, 10px, 15px);
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .cards {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @include fluid-size(margin-top, 320px, 1920px, 10px, 180px);
+    @include fluid-size(margin-bottom, 320px, 1920px, 10px, 180px);
+    @include fluid-size(gap, 320px, 1920px, 30px, 120px);
+
+    @media (min-width: 769px) {
+      li:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .warning {
+    @include fluid-size("font-size", 320px, 1920px, 22px, 32px);
+    @include fluid-size("margin-top", 320px, 1920px, 10px, 20px);
+    @include fluid-size("margin-bottom", 320px, 1920px, 10px, 20px);
+    @include fluid-size("padding", 320px, 1920px, 20px, 40px);
+
+    background: rgba(0, 0, 0);
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+  }
+}
