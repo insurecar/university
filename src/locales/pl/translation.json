@@ -65,6 +65,10 @@
     "titlePast": "Przeszłość",
     "academic": "Forum doskonałości akademickiej"
   },
+  "pastEvents": {
+    "heading": "Poprzednie wydarzenia",
+    "subheading": "Przeglądaj wydarzenia"
+  },
   "team": {
     "title": "Nasz zespół",
     "subtitle": "Nasz zespół to serce Uniwersytetu. Razem ciężko pracujemy, aby zapewnić Państwu najlepszą obsługę i rozwiązania.",

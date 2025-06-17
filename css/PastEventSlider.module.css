@@ -1,0 +1,64 @@
+.sliderWrapper {
+  padding: 40px 0;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 448px;
+  max-height: 100%;
+  width: 384px;
+  padding: 24px;
+  font-size: 18px;
+  color: white;
+  background-image: url("./img.png");
+  background-size: cover;
+  border-radius: 16px;
+}
+.card .title {
+  font-size: 24px;
+}
+.card .desc {
+  font-weight: 300;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.card .link {
+  text-decoration: none;
+  color: white;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 64px;
+}
+
+.navButtons button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #1b572c;
+  background: white;
+  color: #1b572c;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.navButtons button:hover {
+  background-color: #f0f0f0;
+}/*# sourceMappingURL=PastEventSlider.module.css.map */
