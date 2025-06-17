@@ -33,6 +33,6 @@
   font-family: "Lato";
   color: #2e2e27;
 
-  @include fluid-size("margin-top", 768px, 1920px, 8px, 10px);
   @include fluid-type(768px, 1920px, 16px, 24px);
+  @include fluid-size("margin-top", 768px, 1920px, 8px, 10px);
 }
