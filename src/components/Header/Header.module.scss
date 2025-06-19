@@ -11,3 +11,9 @@
   @include fluid-size("padding-left", 768px, 1920px, 10px, 45px);
   @include fluid-size("padding-right", 768px, 1920px, 10px, 45px);
 }
+
+.search {
+    @media (max-width: $l) {
+    display: none;
+  }
+}
