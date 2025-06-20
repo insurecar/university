@@ -95,5 +95,10 @@
     "title": "Calendar",
     "subtitle": "Stay updated with all jubilee events through our calendar",
     "more": "More details"
+  },
+  "alumni": {
+    "title": "Alumni",
+    "subtitle": "Join us for future events or revisit the highlights of those past – together, we make each event special!",
+    "btn": "Full Video"
   }
 }
