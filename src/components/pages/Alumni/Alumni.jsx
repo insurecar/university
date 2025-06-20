@@ -7,7 +7,7 @@ import { AlumniCard } from "./AlumniCard/AlumniCard";
 import { useState } from "react";
 import { Modal } from "../../UI/Modal/Modal";
 
-const upComing = [
+const alumniData = [
   {
     icon: First,
     name: "Name1",
@@ -21,8 +21,8 @@ const upComing = [
     name: "Name2",
     text: "A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing.",
     link: "/",
-    mediaType: "video",
-    mediaSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+    mediaType: "youtube",
+    mediaSrc: "https://www.youtube.com/embed/rf8__1kUDaU",
   },
   {
     icon: Third,
@@ -75,7 +75,7 @@ export const AlumniComponent = () => {
       <Title text="alumni.title" className={styles.center} />
       <Subtitle text="alumni.subtitle" className={styles.center} />
       <ul className={styles.cards}>
-        {upComing.map((alumni) => (
+        {alumniData.map((alumni) => (
           <AlumniCard
             key={alumni.name}
             {...alumni}

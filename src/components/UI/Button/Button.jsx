@@ -23,6 +23,10 @@ export const Button = ({ type, arrow = true, className, ...rest }) => {
       text: "alumni.btn",
       className: cn(styles.btn, styles.btnGreen, className),
     },
+    fullBook: {
+      text: "publications.btn",
+      className: cn(styles.btn, styles.btnGreen, className),
+    },
   };
 
   return (
