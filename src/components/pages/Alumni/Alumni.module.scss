@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
 
-    @include fluid-size(margin-top, 320px, 1920px, 10px, 180px);
+    @include fluid-size(margin-top, 320px, 1920px, 30px, 180px);
     @include fluid-size(margin-bottom, 320px, 1920px, 10px, 180px);
     @include fluid-size(gap, 320px, 1920px, 30px, 120px);
 
