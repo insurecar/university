@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./BurgerMenu.module.scss";
 import { Link } from "react-router-dom";
+import { Search } from "../Search/Search";
 
 export const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -36,27 +37,32 @@ export const BurgerMenu = () => {
       </button>
 
       <div className={`${styles.menu} ${open ? styles.open : ""}`}>
-        <Link to="/events" onClick={toggleMenu}>
-          Events
-        </Link>
-        <Link to="/alumni" onClick={toggleMenu}>
-          Alumni
-        </Link>
-        <Link to="/publications" onClick={toggleMenu}>
-          Publications
-        </Link>
-        <Link to="/team" onClick={toggleMenu}>
-          Team
-        </Link>
-        <Link to="/partnership" onClick={toggleMenu}>
-          Partnership
-        </Link>
-        <Link to="/partners" onClick={toggleMenu}>
-          Partners
-        </Link>
-        <Link to="/for-media" onClick={toggleMenu}>
-          For Media
-        </Link>
+        <div className={styles.menuSearch}>
+          <Search />
+        </div>
+        <div className={styles.links}>
+          <Link to="/events" onClick={toggleMenu}>
+            Events
+          </Link>
+          <Link to="/alumni" onClick={toggleMenu}>
+            Alumni
+          </Link>
+          <Link to="/publications" onClick={toggleMenu}>
+            Publications
+          </Link>
+          <Link to="/team" onClick={toggleMenu}>
+            Team
+          </Link>
+          <Link to="/partnership" onClick={toggleMenu}>
+            Partnership
+          </Link>
+          <Link to="/partners" onClick={toggleMenu}>
+            Partners
+          </Link>
+          <Link to="/for-media" onClick={toggleMenu}>
+            For Media
+          </Link>
+        </div>
       </div>
     </div>
   );
