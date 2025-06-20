@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { useState, useRef, useEffect } from "react";
 import { format, parseISO } from "date-fns";
 import { pl, enUS } from "date-fns/locale";
 import { useTranslation } from "react-i18next";
@@ -143,73 +145,101 @@ const events = [
   },
 ];
 
-const getMonthTitle = (lang, events) => {
-  const locales = lang === "pl" ? pl : enUS;
-  const months = Array.from(
-    new Set(
-      events.map((event) =>
-        format(parseISO(event.date), "LLLL", { locale: locales })
-      )
-    )
-  );
-  return months.join("/");
+const capitalizeMonths = (input) => {
+  return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
 };
 
-const capitalizeMonths = (input) => {
-  return input
-    .split("/")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join("/");
+const getMonthName = (lang, date) => {
+  const locale = lang === "pl" ? pl : enUS;
+  return format(parseISO(date), "LLLL", { locale });
 };
 
 export const EventSlider = () => {
-  const [start, setStart] = useState(0);
   const { i18n, t } = useTranslation();
   const lang = i18n.language === "pl" ? "pl" : "en";
-  const itemsPerPage = 6;
+  const swiperRef = useRef(null);
+  const [currentMonth, setCurrentMonth] = useState(
+    getMonthName(lang, events[0].date)
+  );
 
-  const next = () => {
-    if (start + itemsPerPage < events.length) {
-      setStart(start + itemsPerPage);
-    }
+  const handleSlideChange = (swiper) => {
+    const activeIndex = swiper.realIndex;
+    const month = getMonthName(lang, events[activeIndex].date);
+    setCurrentMonth(month);
   };
 
-  const prev = () => {
-    if (start - itemsPerPage >= 0) {
-      setStart(start - itemsPerPage);
+  useEffect(() => {
+    if (swiperRef.current) {
+      const activeIndex = swiperRef.current.realIndex;
+      const month = getMonthName(lang, events[activeIndex].date);
+      setCurrentMonth(month);
+    } else {
+      setCurrentMonth(getMonthName(lang, events[0].date));
     }
-  };
-
-  const visibleEvents = events.slice(start, start + itemsPerPage);
+  }, [lang]);
 
   return (
-    <div className={styles.sliderWrapper}>
-      <h2 className={styles.title}>
-        {capitalizeMonths(getMonthTitle(lang, visibleEvents))}
-      </h2>
+    <section className={styles.section} id="calendar">
+      <h2 className={styles.title}>{capitalizeMonths(currentMonth)}</h2>
       <div className={styles.line}></div>
-      <div className={styles.slider}>
-        {visibleEvents.map((event) => (
-          <div className={styles.card} key={event.date}>
-            <div className={styles.day}>
-              {format(parseISO(event.date), "d")}
-            </div>
-            <div className={styles.desc}>{event.description}</div>
-            <a className={styles.link} href={event.link}>
-              {t("calendar.more")}
-              <img
-                src={arrowRightIcon}
-                alt="Arrow right"
-                className={styles.icon}
-              />
-            </a>
-          </div>
-        ))}
+      <div className={styles.sliderWrapper}>
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".calendar-next",
+            prevEl: ".calendar-prev",
+          }}
+          onSlideChange={handleSlideChange}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          loop={false}
+          centeredSlides={false}
+          spaceBetween={16}
+          breakpoints={{
+            425: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+            1440: { slidesPerView: 6 },
+          }}
+          className={styles.swiper}
+          aria-roledescription="carousel"
+        >
+          {events.map((event) => (
+            <SwiperSlide
+              key={`${event.date}-${event.title}`}
+              className={styles.swiperSlide}
+            >
+              <article className={styles.card} key={event.date}>
+                <div className={styles.day}>
+                  {format(parseISO(event.date), "d")}
+                </div>
+                <div className={styles.desc}>{event.description}</div>
+                <a className={styles.link} href={event.link}>
+                  {t("calendar.more")}
+                  <img
+                    src={arrowRightIcon}
+                    alt="Arrow right"
+                    className={styles.icon}
+                  />
+                </a>
+              </article>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className={styles.navButtons}>
-        <button onClick={prev}>&larr;</button>
-        <button onClick={next}>&rarr;</button>
+        <button
+          className={`calendar-prev ${styles.button}`}
+          aria-label="Previous"
+        >
+          ←
+        </button>
+        <button className={`calendar-next ${styles.button}`} aria-label="Next">
+          →
+        </button>
       </div>
-    </div>
+    </section>
   );
 };
