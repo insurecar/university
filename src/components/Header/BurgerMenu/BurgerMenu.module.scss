@@ -16,7 +16,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 20;
+  z-index: 1001;
 
   .line {
     position: absolute;
@@ -55,15 +55,14 @@
 
 .menu {
   position: fixed;
+  top: 0;
   right: 0;
-  width: 200px;
-  background-color: white;
+  z-index: 999;
+  height: 100%;
+  background-color: #f2f1e8;
   border-left: 1px solid #ccc;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1000;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
 
   transform: translateX(100%);
@@ -71,7 +70,7 @@
   pointer-events: none;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 
-  @include fluid-size(top, 320px, 1279px, 47px, 75px);
+  @include fluid-size("width", 400px, 1279px, 300px, 400px);
 
   &.open {
     transform: translateX(0);
@@ -79,15 +78,42 @@
     pointer-events: auto;
   }
 
+  .menuSearch {
+    box-sizing: content-box;
+    z-index: 1001;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+
+    @include fluid-size("padding-top", 768px, 1920px, 4px, 7px);
+    @include fluid-size("padding-bottom", 768px, 1920px, 2px, 5px);
+    @include fluid-size("padding-left", 768px, 1920px, 20px, 50px);
+    @include fluid-size(height, 320px, 1920px, 43px, 85px);
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
   a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
-    font-family: "Roboto";
+    font-family: "Lato";
+    padding: 25px 0 25px 40px;
+
+    @include fluid-type(768px, 1920px, 14px, 20px);
 
     &:hover {
-      color: #555;
+      background-color: #e4e2ce;
     }
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    border-radius: 0;
   }
 }
 

@@ -3,17 +3,14 @@
   position: relative;
   align-items: center;
   gap: 8px;
-
+  z-index: inherit;
+  
   button {
     border: none;
     background: none;
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-
-  @media (max-width: $l) {
-    display: none;
   }
 }
 

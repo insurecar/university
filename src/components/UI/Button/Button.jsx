@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import ArrowIcon from "../../../assets/ArrowIcon.svg?react";
 import cn from "classnames";
 
-export const Button = ({ type, arrow = true, className }) => {
+export const Button = ({ type, arrow = true, className, ...rest }) => {
   const { t } = useTranslation();
 
   const button = {
@@ -29,12 +29,15 @@ export const Button = ({ type, arrow = true, className }) => {
     },
     supportAccent: {
       text: "partnership.support.cards.btn",
+    },
+    fullVideo: {
+      text: "alumni.btn",
       className: cn(styles.btn, styles.btnGreen, className),
     },
   };
 
   return (
-    <button className={button[type].className}>
+    <button className={button[type].className} {...rest}>
       <span>{t(button[type].text)}</span>
       {arrow && (
         <span className={styles.arrowIcon}>

@@ -111,6 +111,10 @@
     "jubilee-cta": {
       "heading": "Wnieś swój wkład w Jubileusz UEK i stwórz z nami coś trwałego.",
       "btn": "Fundacja UEK"
-    }
+    },
+  "alumni": {
+    "title": "Absolwenci",
+    "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
+    "btn": "Całe Wideo"
   }
 }

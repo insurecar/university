@@ -6,7 +6,9 @@ export const Header = () => {
     <div className={styles.header}>
       <Logo />
       <Menu />
-      <Search />
+      <div className={styles.search}>
+        <Search />
+      </div>
       <BurgerMenu />
     </div>
   );

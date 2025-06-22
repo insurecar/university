@@ -1,4 +1,4 @@
-.sliderWrapper {
+.section {
   font-family: "Roboto", sans-serif;
   overflow: hidden;
   position: relative;
@@ -25,20 +25,54 @@
   margin-bottom: 24px;
 }
 
-.slider {
+.sliderWrapper {
+  position: relative;
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1200px;
 
-  @include fluid-size("gap", 768px, 1920px, 16px, 36px);
-  @include fluid-size("padding-bottom", 768px, 1920px, 4px, 16px);
+  @media (max-width: 1300px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 700px;
+  }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    max-width: 500px;
   }
+
+  @media (max-width: 600px) {
+    max-width: 380px;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 280px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1600px;
+  }
+}
+
+.slider {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @include fluid-size(padding-left, 320px, 1920px, 20px, 60px);
+  @include fluid-size(padding-right, 320px, 1920px, 20px, 60px);
+}
+
+.swiper {
+  width: 100%;
 }
 
 .card {
@@ -52,24 +86,10 @@
   transition: transform 0.2s ease-in-out;
   color: #000;
   gap: 12px;
+  width: 100%;
+  max-width: 230px;
 
   @include fluid-size("padding", 768px, 1920px, 4px, 8px);
-  @include fluid-size("width", 768px, 1920px, 110px, 240px);
-  @include fluid-size("min-width", 768px, 1920px, 110px, 240px);
-
-  @media (max-width: 768px) {
-    min-height: 100px;
-  }
-
-  @media (max-width: 768px) {
-    width: 80%;
-    min-width: 80%;
-  }
-
-  @media (max-width: 425px) {
-    width: 100%;
-    min-width: 100%;
-  }
 }
 
 .card:hover {
