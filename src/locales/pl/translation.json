@@ -95,5 +95,22 @@
     "title": "Kalendarz",
     "subtitle": "Bądź na bieżąco ze wszystkimi wydarzeniami jubileuszowymi dzięki naszemu kalendarzowi",
     "more": "Więcej szczegółów"
+  },
+  "partnership": {
+    "intro": {
+      "heading": "Partnerstwo",
+      "text": "Wierzymy w siłę współpracy. Wspierając nasze działania, pomagasz nam tworzyć realny wpływ i dostarczać innowacyjne rozwiązania. Razem możemy osiągnąć więcej i naprawdę coś zmienić. Dołącz do nas – razem mamy moc!"
+    },
+    "support": {
+      "heading": "Wesprzyj Jubileusz UEK",
+      "text": "Skontaktuj się z nami, by dowiedzieć się, jak możesz zaangażować się w to wyjątkowe wydarzenie i pomóc nam realizować ambitne cele.",
+      "cards": {
+        "btn": "Wesprzyj"
+      }
+    },
+    "jubilee-cta": {
+      "heading": "Wnieś swój wkład w Jubileusz UEK i stwórz z nami coś trwałego.",
+      "btn": "Fundacja UEK"
+    }
   }
 }

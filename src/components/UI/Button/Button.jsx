@@ -19,6 +19,18 @@ export const Button = ({ type, arrow = true, className }) => {
       text: "footer.website",
       className: cn(styles.btn, styles.btnWhite, className),
     },
+    PUEBFoundation: {
+      text: "partnership.jubilee-cta.btn",
+      className: cn(styles.btn, styles.btnGreen, className),
+    },
+    support: {
+      text: "partnership.support.cards.btn",
+      className: cn(styles.btn, styles.btnWhite, className),
+    },
+    supportAccent: {
+      text: "partnership.support.cards.btn",
+      className: cn(styles.btn, styles.btnGreen, className),
+    },
   };
 
   return (

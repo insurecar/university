@@ -1,0 +1,132 @@
+@use "../../../styles/variables.scss";
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  @include fluid-size(padding-top, 320px, 1920px, 30px, 90px);
+  @include fluid-size(padding-bottom, 320px, 1920px, 30px, 90px);
+  @include fluid-size(padding-left, 320px, 1920px, 30px, 160px);
+  @include fluid-size(padding-right, 320px, 1920px, 30px, 160px);
+}
+
+.heading,
+.text {
+  text-align: center;
+}
+
+.heading {
+  font-weight: normal;
+  @include fluid-type(320px, 1920px, 38px, 64px);
+}
+
+.text {
+  font-weight: 300px;
+  margin: 0 auto;
+  @include fluid-type(320px, 1920px, 16px, 20px);
+}
+
+.intro,
+.jubileeCta {
+  background-color: $base-color;
+}
+
+.intro {
+  @include fluid-size(padding-top, 320px, 1920px, 40px, 116px);
+  @include fluid-size(padding-bottom, 320px, 1920px, 60px, 200px);
+
+  .text {
+    max-width: 1000px;
+  }
+}
+
+.support {
+  .text {
+    color: $text-color-secondary;
+
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    @include fluid-size(gap, 320px, 1920px, 20px, 50px);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 678px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px;
+      border-radius: 30px;
+      background-color: $background-light-gray;
+
+      @include fluid-size(padding-top, 320px, 1920px, 20px, 40px);
+      @include fluid-size(padding-right, 320px, 1920px, 24px, 48px);
+      @include fluid-size(padding-bottom, 320px, 1920px, 20px, 40px);
+      @include fluid-size(padding-left, 320px, 1920px, 24px, 48px);
+
+      @include fluid-size(width, 1024px, 1920px, 300px, 500px);
+      @include fluid-size(height, 1024px, 1920px, 400px, 608px);
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        .cardName {
+          color: $green-light;
+        }
+      }
+
+      .cardInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .cardName {
+        font-size: 30px;
+        @include fluid-type(320px, 1920px, 22px, 30px);
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+      .cardPrice {
+        margin-left: 15px;
+        @include fluid-type(320px, 1920px, 42px, 60px);
+      }
+      .cardBtn {
+        width: 100%;
+        font-size: 18px;
+        border: 1px solid $green-dark;
+        align-self: center;
+      }
+
+      &:last-child {
+        background-color: $background-light;
+      }
+    }
+  }
+}
+
+.jubileeCta {
+  @include fluid-size(gap, 320px, 1920px, 20px, 70px);
+
+  .heading {
+    color: $text-color-primary;
+    @include fluid-type(320px, 1920px, 34px, 56px);
+  }
+}
+
+.btn {
+  align-self: center;
+  font-size: 18px;
+}
