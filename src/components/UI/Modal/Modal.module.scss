@@ -22,6 +22,11 @@
   align-items: center;
   background: none;
 
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
   video,
   img,
   iframe {

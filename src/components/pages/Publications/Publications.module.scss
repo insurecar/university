@@ -1,0 +1,48 @@
+.publications {
+  background: $base-color;
+
+  @include fluid-size("padding-top", 320px, 1920px, 15px, 90px);
+  @include fluid-size("padding-bottom", 320px, 1920px, 25px, 140px);
+  @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+  @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
+
+  @media (max-width: 768px) {
+    @include fluid-size("padding-left", 320px, 768px, 10px, 15px);
+    @include fluid-size("padding-right", 320px, 768px, 10px, 15px);
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .subtitle {
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  .upcomingTitle {
+    @include fluid-size("margin-top", 320px, 1920px, 34px, 201px);
+  }
+
+  .cards {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @include fluid-size(margin-top, 320px, 1920px, 10px, 60px);
+    @include fluid-size(margin-bottom, 320px, 1920px, 10px, 180px);
+    @include fluid-size(gap, 320px, 1920px, 30px, 120px);
+
+    @media (min-width: 769px) {
+      li:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

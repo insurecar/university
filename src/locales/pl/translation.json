@@ -100,5 +100,11 @@
     "title": "Absolwenci",
     "subtitle": "Dołącz do nas na przyszłe wydarzenia lub wróć do najważniejszych wydarzeń z przeszłości - razem sprawiamy, że każde wydarzenie jest wyjątkowe!",
     "btn": "Całe Wideo"
+  },
+  "publications": {
+    "title": "Publikacje",
+    "subtitle": "Bądź na bieżąco z naszymi najnowszymi publikacjami, w których dzielimy się spostrzeżeniami, badaniami i historiami, które mają znaczenie. Niezależnie od tego, czy eksplorujesz nowe wydania, czy też powracasz do poprzednich prac, nasze publikacje oferują cenną wiedzę, która pozwoli Ci być o krok przed innymi.",
+    "btn": "Cała Książka",
+    "titleUpcoming": "Nadchodzące"
   }
 }

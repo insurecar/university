@@ -100,5 +100,11 @@
     "title": "Alumni",
     "subtitle": "Join us for future events or revisit the highlights of those past – together, we make each event special!",
     "btn": "Full Video"
+  },
+  "publications": {
+    "title": "Publications",
+    "subtitle": "Stay informed with our latest publications, where we share insights, research, and stories that matter. Whether exploring new releases or revisiting past work, our publications offer valuable knowledge to keep you ahead.",
+    "btn": "Full Book",
+    "titleUpcoming": "Upcoming"
   }
 }
