@@ -1,5 +1,3 @@
-@use "../../../styles/variables.scss";
-
 section {
   display: flex;
   flex-direction: column;
@@ -20,12 +18,14 @@ section {
 
 .heading {
   font-weight: normal;
+
   @include fluid-type(320px, 1920px, 38px, 64px);
 }
 
 .text {
   font-weight: 300px;
   margin: 0 auto;
+
   @include fluid-type(320px, 1920px, 16px, 20px);
 }
 
@@ -55,6 +55,7 @@ section {
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
+
     @include fluid-size(gap, 320px, 1920px, 20px, 50px);
 
     @media (max-width: 1024px) {
@@ -95,12 +96,14 @@ section {
 
       .cardName {
         font-size: 30px;
-        @include fluid-type(320px, 1920px, 22px, 30px);
         text-transform: capitalize;
         font-weight: 400;
+
+        @include fluid-type(320px, 1920px, 22px, 30px);
       }
       .cardPrice {
         margin-left: 15px;
+
         @include fluid-type(320px, 1920px, 42px, 60px);
       }
       .cardBtn {
@@ -122,6 +125,7 @@ section {
 
   .heading {
     color: $text-color-primary;
+
     @include fluid-type(320px, 1920px, 34px, 56px);
   }
 }
