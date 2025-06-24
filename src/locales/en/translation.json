@@ -123,5 +123,10 @@
     "subtitle": "Stay informed with our latest publications, where we share insights, research, and stories that matter. Whether exploring new releases or revisiting past work, our publications offer valuable knowledge to keep you ahead.",
     "btn": "Full Book",
     "titleUpcoming": "Upcoming"
+  },
+  "page-not-found": {
+    "page-title": "Page Not Found",
+    "title": "Oops! Page Not Found",
+    "subtitle": "We're sorry, but the page you are looking for doesn't exist or has been moved."
   }
 }

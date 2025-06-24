@@ -7,6 +7,7 @@ import {
   Partnership,
   Partners,
   ForMedia,
+  PageNotFound,
 } from "./components/pages";
 import { App, Home } from "./components";
 
@@ -22,6 +23,7 @@ export const Router = () => (
         <Route path="/partnership" element={<Partnership />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/for-media" element={<ForMedia />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>
