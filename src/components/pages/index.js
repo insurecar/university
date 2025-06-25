@@ -6,6 +6,7 @@ import { PartnersComponent } from "./Partners/Partners";
 import { PartnershipComponent } from "./Partnership/Partnership";
 import { PublicationsComponent } from "./Publications/Publications";
 import { TeamComponent } from "./Team/Team";
+import { LoginComponent } from "./Login/Login";
 
 export const Events = withTitle(EventsComponent, "header.events");
 export const Alumni = withTitle(AlumniComponent, "header.alumni");
@@ -20,3 +21,4 @@ export const Publications = withTitle(
   "header.publications"
 );
 export const Team = withTitle(TeamComponent, "header.team");
+export const Login = withTitle(LoginComponent, "header.login");

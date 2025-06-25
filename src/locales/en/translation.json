@@ -106,5 +106,11 @@
     "subtitle": "Stay informed with our latest publications, where we share insights, research, and stories that matter. Whether exploring new releases or revisiting past work, our publications offer valuable knowledge to keep you ahead.",
     "btn": "Full Book",
     "titleUpcoming": "Upcoming"
+  },
+  "admin": {
+    "text": "Admin Panel",
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
   }
 }

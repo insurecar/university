@@ -106,5 +106,11 @@
     "subtitle": "Bądź na bieżąco z naszymi najnowszymi publikacjami, w których dzielimy się spostrzeżeniami, badaniami i historiami, które mają znaczenie. Niezależnie od tego, czy eksplorujesz nowe wydania, czy też powracasz do poprzednich prac, nasze publikacje oferują cenną wiedzę, która pozwoli Ci być o krok przed innymi.",
     "btn": "Cała Książka",
     "titleUpcoming": "Nadchodzące"
+  },
+  "admin": {
+    "text": "Panel administracyjny",
+    "login": "Zaloguj",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło"
   }
 }

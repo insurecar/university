@@ -7,7 +7,9 @@ import {
   Partnership,
   Partners,
   ForMedia,
+  Login,
 } from "./components/pages";
+
 import { App, Home } from "./components";
 
 export const Router = () => (
@@ -22,6 +24,7 @@ export const Router = () => (
         <Route path="/partnership" element={<Partnership />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/for-media" element={<ForMedia />} />
+        <Route path="/admin" element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>
