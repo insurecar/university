@@ -96,6 +96,23 @@
     "subtitle": "Stay updated with all jubilee events through our calendar",
     "more": "More details"
   },
+  "partnership": {
+    "intro": {
+      "heading": "Partnership",
+      "text": "We believe in the power of collaboration. By supporting our partnership, you help us create meaningful impact and deliver innovative solutions. Together, we can achieve more and make a difference. Join us in this journey!"
+    },
+    "support": {
+      "heading": "Support the UEP Jubilee",
+      "text": "Contact us for details on how you can be part of this historic celebration and help us achieve our goals.",
+      "cards": {
+        "btn": "Support"
+      }
+    },
+    "jubilee-cta": {
+      "heading": "Contribute to the UEP Jubilee and make a lasting impact.",
+      "btn": "PUEB Foundation"
+    }
+  },
   "alumni": {
     "title": "Alumni",
     "subtitle": "Join us for future events or revisit the highlights of those past – together, we make each event special!",
