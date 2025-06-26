@@ -8,7 +8,9 @@ import {
   Partners,
   ForMedia,
   PageNotFound,
+  Login,
 } from "./components/pages";
+
 import { App, Home } from "./components";
 
 export const Router = () => (
@@ -24,6 +26,7 @@ export const Router = () => (
         <Route path="/partners" element={<Partners />} />
         <Route path="/for-media" element={<ForMedia />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/admin" element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>

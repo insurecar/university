@@ -38,6 +38,10 @@ export const Button = ({ type, arrow = true, className, ...rest }) => {
       text: "publications.btn",
       className: cn(styles.btn, styles.btnGreen, className),
     },
+    login: {
+      text: "admin.login",
+      className: cn(styles.btn, styles.btnGreen, className),
+    },
   };
 
   return (

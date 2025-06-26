@@ -6,7 +6,8 @@
     "team": "Zespół",
     "partnership": "Współpraca",
     "partners": "Wzmacniacz",
-    "for-media": "Dla mediów"
+    "for-media": "Dla mediów",
+    "login": "Logowanie"
   },
   "tab": {
     "tab-title": "O uniwersytecie"
@@ -128,5 +129,11 @@
     "page-title": "Strona nie znaleziona",
     "title": "Ups! Strona nie znaleziona",
     "subtitle": "Przepraszamy, ale strona, której szukasz, nie istnieje lub została przeniesiona."
+  },
+  "admin": {
+    "text": "Panel administracyjny",
+    "login": "Zaloguj",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło"
   }
 }

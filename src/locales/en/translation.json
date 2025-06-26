@@ -6,7 +6,8 @@
     "team": "Team",
     "partnership": "Partnership",
     "partners": "Partners",
-    "for-media": "For media"
+    "for-media": "For media",
+    "login": "Login"
   },
   "tab": {
     "tab-title": "About University"
@@ -128,5 +129,11 @@
     "page-title": "Page Not Found",
     "title": "Oops! Page Not Found",
     "subtitle": "We're sorry, but the page you are looking for doesn't exist or has been moved."
+  },
+  "admin": {
+    "text": "Admin Panel",
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
   }
 }
