@@ -125,6 +125,11 @@
     "btn": "Cała Książka",
     "titleUpcoming": "Nadchodzące"
   },
+  "page-not-found": {
+    "page-title": "Strona nie znaleziona",
+    "title": "Ups! Strona nie znaleziona",
+    "subtitle": "Przepraszamy, ale strona, której szukasz, nie istnieje lub została przeniesiona."
+  },
   "admin": {
     "text": "Panel administracyjny",
     "login": "Zaloguj",

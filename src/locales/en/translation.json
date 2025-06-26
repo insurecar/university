@@ -125,6 +125,11 @@
     "btn": "Full Book",
     "titleUpcoming": "Upcoming"
   },
+  "page-not-found": {
+    "page-title": "Page Not Found",
+    "title": "Oops! Page Not Found",
+    "subtitle": "We're sorry, but the page you are looking for doesn't exist or has been moved."
+  },
   "admin": {
     "text": "Admin Panel",
     "login": "Login",

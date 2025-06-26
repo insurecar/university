@@ -6,6 +6,7 @@ import { PartnersComponent } from "./Partners/Partners";
 import { PartnershipComponent } from "./Partnership/Partnership";
 import { PublicationsComponent } from "./Publications/Publications";
 import { TeamComponent } from "./Team/Team";
+import { PageNotFoundComponent } from "./PageNotFound/PageNotFound";
 import { LoginComponent } from "./Login/Login";
 
 export const Events = withTitle(EventsComponent, "header.events");
@@ -21,4 +22,8 @@ export const Publications = withTitle(
   "header.publications"
 );
 export const Team = withTitle(TeamComponent, "header.team");
+export const PageNotFound = withTitle(
+  PageNotFoundComponent,
+  "page-not-found.page-title"
+);
 export const Login = withTitle(LoginComponent, "header.login");
