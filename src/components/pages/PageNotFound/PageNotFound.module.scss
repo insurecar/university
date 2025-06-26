@@ -1,0 +1,22 @@
+.pageNotFound {
+  background: $base-color;
+  text-align: center;
+
+  @include fluid-size("padding-top", 320px, 1920px, 15px, 90px);
+  @include fluid-size("padding-bottom", 320px, 1920px, 25px, 140px);
+  @include fluid-size("padding-left", 768px, 1920px, 64px, 160px);
+  @include fluid-size("padding-right", 768px, 1920px, 64px, 160px);
+
+  @media (max-width: 768px) {
+    @include fluid-size("padding-left", 320px, 768px, 10px, 15px);
+    @include fluid-size("padding-right", 320px, 768px, 10px, 15px);
+  }
+}
+
+.error404 {
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: #c3c1b2;
+  @include fluid-type(320px, 1920px, 100px, 250px);
+  @include fluid-size("margin-bottom", 320px, 1920px, 20px, 100px);
+}
