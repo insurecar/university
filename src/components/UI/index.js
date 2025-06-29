@@ -3,3 +3,6 @@ export { Title } from "./Title/Title";
 export { DateMark } from "./DateMark/DateMark";
 export { Text } from "./Text/Text";
 export { Subtitle } from "./Subtitle/Subtitle";
+export { ImageSkeleton } from "./ImageSkeleton/ImageSkeleton";
+export { CardSkeleton } from "./CardSkeleton/CardSkeleton";
+export { SkeletonGrid } from "./SkeletonGrid/SkeletonGrid";
