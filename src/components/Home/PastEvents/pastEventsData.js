@@ -1,6 +1,6 @@
-import bg1 from "../../../assets/images/eventBg1.png";
-import bg2 from "../../../assets/images/eventBg2.jpg";
-import bg3 from "../../../assets/images/eventBg3.jpg";
+import bg1 from "../../../assets/images/eventBg1.webp";
+import bg2 from "../../../assets/images/eventBg2.webp";
+import bg3 from "../../../assets/images/eventBg3.webp";
 
 const backgrounds = [bg1, bg2, bg3];
 
