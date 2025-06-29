@@ -10,7 +10,7 @@ const MemberCard = ({ member }) => {
         {!isLoaded && <ImageSkeleton />}
         <img
           src={member.image}
-          // loading="lazy"
+          loading="lazy"
           alt={member.name}
           className={styles.image}
           onLoad={() => setIsLoaded(true)}

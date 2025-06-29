@@ -1,6 +1,6 @@
 import styles from "./Publications.module.scss";
 import { Title, Subtitle } from "../../UI";
-import Book from "@/assets/images/book.png";
+import Book from "@/assets/images/book.webp";
 import { PublicationCard } from "./PublicationCard/PublicationCard";
 import { useState } from "react";
 import { Modal } from "../../UI/Modal/Modal";
@@ -47,7 +47,7 @@ export const PublicationsComponent = () => {
       </ul>
       {activeCard && (
         <Modal onClose={handleClose}>
-          <img src={activeCard.icon} alt={activeCard.name} />
+          <img src={activeCard.icon} alt={activeCard.name} loading="lazy" />
         </Modal>
       )}
     </div>

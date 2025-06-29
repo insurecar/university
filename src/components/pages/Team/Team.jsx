@@ -4,12 +4,10 @@ import styles from "./Team.module.scss";
 import { Subtitle, Title, SkeletonGrid } from "../../UI";
 import { honoraryCommittee, organisationCommittee } from "./teamData";
 
-// const MemberCard = lazy(() => import("./MemberCard/MemberCard"));
-import MemberCard from "./MemberCard/MemberCard";
+const MemberCard = lazy(() => import("./MemberCard/MemberCard"));
 
 export const TeamComponent = () => {
-  const { t, ready: tReady } = useTranslation();
-  console.log("Translation ready?", tReady);
+  const { t } = useTranslation();
   const [header1Word1, header1Word2] = t("team.header1").split(" ");
   const [header2Word1, header2Word2] = t("team.header2").split(" ");
 
@@ -27,20 +25,20 @@ export const TeamComponent = () => {
               <h3 className={styles.subcategoryName}>
                 {t(`team.subcategories.${subcategory.id}`)}
               </h3>
-              {/* <Suspense
+              <Suspense
                 fallback={
                   <SkeletonGrid
                     count={subcategory.members.length}
                     className={styles.grid}
                   />
                 }
-              > */}
-              <div className={styles.grid}>
-                {subcategory.members.map((teamMember) => (
-                  <MemberCard member={teamMember} key={teamMember.id} />
-                ))}
-              </div>
-              {/* </Suspense> */}
+              >
+                <div className={styles.grid}>
+                  {subcategory.members.map((teamMember) => (
+                    <MemberCard member={teamMember} key={teamMember.id} />
+                  ))}
+                </div>
+              </Suspense>
             </div>
           ))}
         </div>
@@ -48,20 +46,20 @@ export const TeamComponent = () => {
           <h3 className={`${styles.committeeName} ${styles.rightHeader}`}>
             <span className={styles.grey}>{header2Word1}</span> {header2Word2}
           </h3>
-          {/* <Suspense
+          <Suspense
             fallback={
               <SkeletonGrid
                 count={honoraryCommittee.length}
                 className={styles.grid}
               />
             }
-          > */}
-          <div className={styles.grid}>
-            {honoraryCommittee.map((teamMember) => (
-              <MemberCard member={teamMember} key={teamMember.id} />
-            ))}
-          </div>
-          {/* </Suspense> */}
+          >
+            <div className={styles.grid}>
+              {honoraryCommittee.map((teamMember) => (
+                <MemberCard member={teamMember} key={teamMember.id} />
+              ))}
+            </div>
+          </Suspense>
         </div>
       </div>
     </div>

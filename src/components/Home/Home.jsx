@@ -1,4 +1,4 @@
-import { Intro, Jubilee, PastEventSlider } from "./";
+import { Intro, Jubilee, PastEvents } from "./";
 import { Calendar } from "./Calendar/Calendar";
 
 export const HomeComponent = () => {
@@ -7,7 +7,7 @@ export const HomeComponent = () => {
       <Intro />
       <Jubilee targetDate="2026-10-12T09:00:00" />
       <Calendar />
-      <PastEventSlider />
-     </>
+      <PastEvents />
+    </>
   );
 };
