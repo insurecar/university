@@ -6,3 +6,4 @@ export { Subtitle } from "./Subtitle/Subtitle";
 export { ImageSkeleton } from "./ImageSkeleton/ImageSkeleton";
 export { CardSkeleton } from "./CardSkeleton/CardSkeleton";
 export { SkeletonGrid } from "./SkeletonGrid/SkeletonGrid";
+export { Spinner } from "./Spinner/Spinner";

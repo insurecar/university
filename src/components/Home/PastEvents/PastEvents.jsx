@@ -5,6 +5,8 @@ import "swiper/css/navigation";
 import styles from "./PastEvents.module.scss";
 import { useTranslation } from "react-i18next";
 
+import { Spinner } from "../../UI";
+
 const Slider = lazy(() => import("./Slider/Slider"));
 
 export const PastEvents = () => {
@@ -16,7 +18,7 @@ export const PastEvents = () => {
       <p className={styles.subheading}>{t("pastEvents.subheading")}</p>
 
       <div className={styles.sliderWrapper}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner />}>
           <Slider />
         </Suspense>
         <div className={styles.navButtons}>
