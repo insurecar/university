@@ -8,13 +8,13 @@ import { useTranslation } from "react-i18next";
 export const EventsComponent = () => {
   const { i18n } = useTranslation();
 
-  const { data: allEvents, isLoading, isError } = useQuery({
+  const { data: allEvents, isLoading, isError, error } = useQuery({
     queryKey: ['events'],
     queryFn: fetchEvents,
   });
 
   if (isLoading) return <div>Loading</div>
-  if (isError) return <div>Error</div>
+  if (isError) return <div>{error.message}</div>
 
   const mapEventToProps = (event) => {
     const langContent = event[i18n.language] || event.en;
