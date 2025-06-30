@@ -16,13 +16,13 @@ export const PastEventSlider = () => {
   const locale = isPl ? pl : enUS;
   const formatStr = isPl ? "d MMMM yyyy" : "MMMM d, yyyy";
   
-  const { data: pastEvents, isLoading, isError } = useQuery({
+  const { data: pastEvents, isLoading, isError, error } = useQuery({
     queryKey: ['pastEvents'],
     queryFn: fetchPastEvents,
   });
 
   if (isLoading) return <div>Loading</div>
-  if (isError) return <div>Error</div>
+  if (isError) return <div>{error.message}</div>
 
   return (
     <section className={styles.section} id="past-events">
