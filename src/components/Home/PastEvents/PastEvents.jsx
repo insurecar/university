@@ -6,11 +6,18 @@ import styles from "./PastEvents.module.scss";
 import { useTranslation } from "react-i18next";
 
 import { Spinner } from "../../UI";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPastEvents } from "../../../utils/api";
 
 const Slider = lazy(() => import("./Slider/Slider"));
 
 export const PastEvents = () => {
   const { t } = useTranslation();
+  
+  const { data: pastEvents, isLoading, isError, error } = useQuery({
+    queryKey: ['pastEvents'],
+    queryFn: fetchPastEvents,
+  });
 
   return (
     <section className={styles.section} id="past-events">
@@ -18,9 +25,13 @@ export const PastEvents = () => {
       <p className={styles.subheading}>{t("pastEvents.subheading")}</p>
 
       <div className={styles.sliderWrapper}>
-        <Suspense fallback={<Spinner />}>
-          <Slider />
-        </Suspense>
+        {isLoading && <Spinner />}
+        {isError && <p>Error: {error.message}</p>}
+        {pastEvents && (
+          <Suspense fallback={<Spinner />}>
+            <Slider pastEvents={pastEvents} />
+          </Suspense>
+        )}
         <div className={styles.navButtons}>
           <button
             className={`custom-prev ${styles.button}`}
