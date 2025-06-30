@@ -11,9 +11,22 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
-      exportAsDefault: true, // ← ось тут
+      exportAsDefault: true,
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          i18n: ["i18next", "react-i18next"],
+          router: ["react-router-dom"],
+          dateFns: ["date-fns"],
+          slider: ["keen-slider", "swiper"],
+        },
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {

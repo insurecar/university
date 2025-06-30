@@ -1,8 +1,10 @@
+import { Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Team.module.scss";
-import { Subtitle, Title } from "../../UI";
+import { Subtitle, Title, SkeletonGrid } from "../../UI";
 import { honoraryCommittee, organisationCommittee } from "./teamData";
-import MemberCard from "./MemberCard/MemberCard";
+
+const MemberCard = lazy(() => import("./MemberCard/MemberCard"));
 
 export const TeamComponent = () => {
   const { t } = useTranslation();
@@ -18,26 +20,46 @@ export const TeamComponent = () => {
           <h3 className={styles.committeeName}>
             {header1Word1} <span className={styles.grey}>{header1Word2}</span>
           </h3>
-            {organisationCommittee.map(subcategory =>
-              <div className={styles.subcategory} key={subcategory.id}>
-                <h3 className={styles.subcategoryName}>{t(`team.subcategories.${subcategory.id}`)}</h3>
+          {organisationCommittee.map((subcategory) => (
+            <div className={styles.subcategory} key={subcategory.id}>
+              <h3 className={styles.subcategoryName}>
+                {t(`team.subcategories.${subcategory.id}`)}
+              </h3>
+              <Suspense
+                fallback={
+                  <SkeletonGrid
+                    count={subcategory.members.length}
+                    className={styles.grid}
+                  />
+                }
+              >
                 <div className={styles.grid}>
-                  {subcategory.members.map(teamMember =>
-                    <MemberCard member={teamMember} key={teamMember.id}/>
-                  )}
+                  {subcategory.members.map((teamMember) => (
+                    <MemberCard member={teamMember} key={teamMember.id} />
+                  ))}
                 </div>
-              </div>
-            )}
+              </Suspense>
+            </div>
+          ))}
         </div>
         <div>
           <h3 className={`${styles.committeeName} ${styles.rightHeader}`}>
             <span className={styles.grey}>{header2Word1}</span> {header2Word2}
           </h3>
-          <div className={styles.grid}>
-            {honoraryCommittee.map(teamMember =>
-              <MemberCard member={teamMember} key={teamMember.id}/>
-            )}
-          </div>
+          <Suspense
+            fallback={
+              <SkeletonGrid
+                count={honoraryCommittee.length}
+                className={styles.grid}
+              />
+            }
+          >
+            <div className={styles.grid}>
+              {honoraryCommittee.map((teamMember) => (
+                <MemberCard member={teamMember} key={teamMember.id} />
+              ))}
+            </div>
+          </Suspense>
         </div>
       </div>
     </div>
