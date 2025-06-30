@@ -6,6 +6,11 @@ export const fetchEvents = async () => {
 };
 
 export const fetchPastEvents = async () => {
-    const response = await axiosInstance.get('/events/finished');
-    return response.data;
+  const response = await axiosInstance.get("/events/finished");
+  return response.data;
+};
+
+export const fetchTeamMembers = async () => {
+  const response = await axiosInstance.get("/team-members");
+  return response.data;
 };
