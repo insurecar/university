@@ -9,6 +9,7 @@ import {
   ForMedia,
   PageNotFound,
   Login,
+  Dashboard,
 } from "./components/pages";
 
 import { App, Home } from "./components";
@@ -27,6 +28,7 @@ export const Router = () => (
         <Route path="/for-media" element={<ForMedia />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/admin" element={<Login />} />
+        <Route path="/admin/dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -6,8 +6,7 @@
     "team": "Zespół",
     "partnership": "Współpraca",
     "partners": "Wzmacniacz",
-    "for-media": "Dla mediów",
-    "login": "Logowanie"
+    "for-media": "Dla mediów"
   },
   "tab": {
     "tab-title": "O uniwersytecie"
@@ -134,6 +133,9 @@
     "text": "Panel administracyjny",
     "login": "Zaloguj",
     "username": "Nazwa użytkownika",
-    "password": "Hasło"
+    "password": "Hasło",
+    "error": "Nieprawidłowe dane logowania.",
+    "success": "Logowanie udane.",
+    "dashboard": "Panel sterowania"
   }
 }

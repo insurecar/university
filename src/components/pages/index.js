@@ -8,6 +8,7 @@ import { PublicationsComponent } from "./Publications/Publications";
 import { TeamComponent } from "./Team/Team";
 import { PageNotFoundComponent } from "./PageNotFound/PageNotFound";
 import { LoginComponent } from "./Login/Login";
+import { DashboardComponent } from "./Dashboard/Dashboard";
 
 export const Events = withTitle(EventsComponent, "header.events");
 export const Alumni = withTitle(AlumniComponent, "header.alumni");
@@ -26,4 +27,5 @@ export const PageNotFound = withTitle(
   PageNotFoundComponent,
   "page-not-found.page-title"
 );
-export const Login = withTitle(LoginComponent, "header.login");
+export const Login = withTitle(LoginComponent, "admin.text");
+export const Dashboard = withTitle(DashboardComponent, "admin.dashboard");
