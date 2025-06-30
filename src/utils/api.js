@@ -1,13 +1,11 @@
-import axios from "axios";
-
-const axiosInstance = axios.create({
-  baseURL: "https://sweet-ferdinanda-oszysiak-770a0140.koyeb.app/api",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+import { axiosInstance } from "./axiosInstance";
 
 export const fetchEvents = async () => {
   const response = await axiosInstance.get("/events");
   return response.data;
+};
+
+export const fetchPastEvents = async () => {
+    const response = await axiosInstance.get('/events/finished');
+    return response.data;
 };
