@@ -1,49 +1,51 @@
 import styles from "./Events.module.scss";
 import { EventCard } from "./";
 import { Title, Subtitle } from "../../UI";
-import First from "../../../assets/EventsIcons/First.svg?react";
-import Second from "../../../assets/EventsIcons/Second.svg?react";
-import Third from "../../../assets/EventsIcons/Third.svg?react";
-
-const upComing = [
-  {
-    icon: First,
-    date: "12.05.2025",
-    location: "Krakow",
-    title: "Academic Excellence Forum",
-    text: "A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing.",
-  },
-  {
-    icon: Second,
-    date: "15.09.2025",
-    location: "Bialystok",
-    title: "Academic Excellence Forum",
-    text: "A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing.",
-  },
-  {
-    icon: Third,
-    date: "17.11.2025",
-    location: "Lodz",
-    title: "Academic Excellence Forum",
-    text: "A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing. A summit bringing together experts from across Europe interested in AI and supercomputing.",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { fetchEvents } from "../../../utils/api";
+import { useTranslation } from "react-i18next";
 
 export const EventsComponent = () => {
+  const { i18n } = useTranslation();
+
+  const { data: allEvents, isLoading, isError } = useQuery({
+    queryKey: ['events'],
+    queryFn: fetchEvents,
+  });
+
+  if (isLoading) return <div>Loading</div>
+  if (isError) return <div>Error</div>
+
+  const mapEventToProps = (event) => {
+    const langContent = event[i18n.language] || event.en;
+
+    return {
+      id: event.id,
+      imageUrl: event.mainImageUrl,
+      date: new Date(event.date),
+      location: langContent.location,
+      title: langContent.title,
+      longDescription: langContent.longDescription,
+    }
+  }
+
+  const upcomingEventsCards = allEvents.filter(event => !event.isFinished).map(mapEventToProps);
+  const pastEventsCards = allEvents.filter(event => event.isFinished).map(mapEventToProps);
+
   return (
     <div className={styles.events}>
       <Title text="events.title" className={styles.center} />
       <Subtitle text="events.subtitle" className={styles.center} />
       <Title text="events.titleUpcoming" className={styles.upcomingTitle} />
       <ul className={styles.upcoming}>
-        {upComing.map((event) => (
-          <EventCard key={event.title + event.location} {...event} />
+        {upcomingEventsCards.map((event) => (
+          <EventCard key={event.id} {...event} />
         ))}
       </ul>
       <Title text="events.titlePast" className={styles.upcomingTitle} />
       <ul className={styles.upcoming}>
-        {upComing.map((event) => (
-          <EventCard key={event.title + event.location} {...event} />
+        {pastEventsCards.map((event) => (
+          <EventCard key={event.id} {...event} />
         ))}
       </ul>
       <div className={styles.past}></div>

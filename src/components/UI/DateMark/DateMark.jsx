@@ -11,7 +11,7 @@ export const DateMark = ({ date, location, className }) => {
     <div className={cn(styles.date, className)}>
       {t(`months.${+month - 1}`)}, {day}, {year} |
       <span className={styles.point}>&#128205;</span>
-      {t(`locations.${location}`)}
+      {location}
     </div>
   );
 };
