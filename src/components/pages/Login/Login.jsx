@@ -14,8 +14,9 @@ export const LoginComponent = () => {
 
   const mutation = useMutation({
     mutationFn: ({ username, password }) => login(username, password),
-    onSuccess: () => {
+    onSuccess: (data) => {
       toast.success(t("admin.success"));
+      localStorage.setItem("accessToken", data.accessToken);
       navigate("/admin/dashboard");
     },
     onError: () => {
