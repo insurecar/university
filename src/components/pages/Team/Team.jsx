@@ -16,6 +16,8 @@ export const TeamComponent = () => {
     queryFn: fetchTeamMembers,
   });
 
+  if (isError) return <div>error: {error.message}</div>
+
   const [header1Word1, header1Word2] = t("team.header1").split(" ");
   const [header2Word1, header2Word2] = t("team.header2").split(" ");
 
@@ -34,7 +36,6 @@ export const TeamComponent = () => {
     <div className={styles.team}>
       <Title text="team.title" className={styles.center} />
       <Subtitle text="team.subtitle" className={styles.center} />
-      {isError && <p>Error: {error.message}</p>}
       <div className={styles.committees}>
         <div>
           <h3 className={styles.committeeName}>
@@ -43,7 +44,6 @@ export const TeamComponent = () => {
           {isLoading ? (
             <SkeletonGrid count={4} className={styles.grid} />
           ) : (
-            committees &&
             committees.organisationCommittee.map((subgroup) => (
               <div className={styles.subcategory} key={subgroup.subgroupName}>
                 <h3 className={styles.subcategoryName}>
@@ -88,8 +88,7 @@ export const TeamComponent = () => {
               }
             >
               <div className={styles.grid}>
-                {committees &&
-                  committees.honoraryCommittee.map((teamMember) => (
+                {committees.honoraryCommittee.map((teamMember) => (
                     <MemberCard member={teamMember} key={teamMember.id} />
                   ))}
               </div>
