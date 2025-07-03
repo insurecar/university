@@ -23,7 +23,11 @@
   display: flex;
   flex-direction: column;
 
-  @include fluid-size("width", 768px, 1920px, 280px, 947px);
+  @include fluid-size("width", 768px, 1920px, 340px, 947px);
+
+  @media (max-width: 768px) {
+    @include fluid-size("width", 320px, 768px, 290px, 700px);
+  }
 
   .title {
     font-family: "Roboto";

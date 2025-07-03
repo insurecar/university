@@ -20,18 +20,21 @@ export const PastEvents = () => {
       <div className={styles.sliderWrapper}>
         <Suspense fallback={<Spinner />}>
           <Slider />
+          <div className={styles.navButtons}>
+            <button
+              className={`custom-prev ${styles.button}`}
+              aria-label="Previous"
+            >
+              ←
+            </button>
+            <button
+              className={`custom-next ${styles.button}`}
+              aria-label="Next"
+            >
+              →
+            </button>
+          </div>
         </Suspense>
-        <div className={styles.navButtons}>
-          <button
-            className={`custom-prev ${styles.button}`}
-            aria-label="Previous"
-          >
-            ←
-          </button>
-          <button className={`custom-next ${styles.button}`} aria-label="Next">
-            →
-          </button>
-        </div>
       </div>
     </section>
   );
