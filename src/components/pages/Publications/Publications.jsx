@@ -32,10 +32,6 @@ export const PublicationsComponent = () => {
     <div className={styles.publications}>
       <Title text="publications.title" className={styles.title} />
       <Subtitle text="publications.subtitle" className={styles.subtitle} />
-      <Title
-        text="publications.titleUpcoming"
-        className={styles.upcomingTitle}
-      />
       <ul className={styles.cards}>
         {publicationsData.map((alumni) => (
           <PublicationCard
