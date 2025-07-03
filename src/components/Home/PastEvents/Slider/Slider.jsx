@@ -5,12 +5,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import styles from "./Slider.module.scss";
-import { events } from "../pastEventsData";
 import { useTranslation } from "react-i18next";
 import { format, parseISO } from "date-fns";
 import { pl, enUS } from "date-fns/locale";
 
-const Slider = () => {
+const Slider = ({ pastEvents }) => {
   const { i18n } = useTranslation();
   const isPl = i18n.language === "pl";
   const locale = isPl ? pl : enUS;
@@ -34,30 +33,33 @@ const Slider = () => {
       className={styles.swiper}
       aria-roledescription="carousel"
     >
-      {events.map((event) => (
-        <SwiperSlide key={`${event.date}-${event.title}`}>
-          <article className={styles.card}>
-            <img
-              src={event.img_url}
-              alt="Event"
-              loading="lazy"
-              className={styles.cardImage}
-            />
-            <div className={styles.cardOverlay}>
-              <div className={styles.date}>
-                {format(parseISO(event.date), formatStr, { locale })}
+      {pastEvents.map((event) => {
+        const langContent = event[i18n.language] || event.en;
+
+        return (
+          <SwiperSlide key={event.id}>
+            <article className={styles.card}>
+              <img
+                src={event.mainImageUrl}
+                alt="Event"
+                className={styles.cardImage}
+              />
+              <div className={styles.cardOverlay}>
+                <div className={styles.date}>
+                  {format(parseISO(event.date), formatStr, { locale })}
+                </div>
+                <div className={styles.info}>
+                  <p className={styles.title}>{langContent.title}</p>
+                  <p className={styles.desc}>{langContent.shortDescription}</p>
+                  <a className={styles.link} href={event.link}>
+                    More details →
+                  </a>
+                </div>
               </div>
-              <div className={styles.info}>
-                <p className={styles.title}>{event.title}</p>
-                <p className={styles.desc}>{event.description}</p>
-                <a className={styles.link} href={event.link}>
-                  More details →
-                </a>
-              </div>
-            </div>
-          </article>
-        </SwiperSlide>
-      ))}
+            </article>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
