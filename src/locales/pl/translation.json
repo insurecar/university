@@ -5,9 +5,8 @@
     "publications": "Publikacje",
     "team": "Zespół",
     "partnership": "Współpraca",
-    "partners": "Wzmacniacz",
-    "for-media": "Dla mediów",
-    "login": "Logowanie"
+    "partners": "Partnerzy",
+    "for-media": "Dla mediów"
   },
   "tab": {
     "tab-title": "O uniwersytecie"
@@ -122,8 +121,7 @@
   "publications": {
     "title": "Publikacje",
     "subtitle": "Bądź na bieżąco z naszymi najnowszymi publikacjami, w których dzielimy się spostrzeżeniami, badaniami i historiami, które mają znaczenie. Niezależnie od tego, czy eksplorujesz nowe wydania, czy też powracasz do poprzednich prac, nasze publikacje oferują cenną wiedzę, która pozwoli Ci być o krok przed innymi.",
-    "btn": "Cała Książka",
-    "titleUpcoming": "Nadchodzące"
+    "btn": "Cała Książka"
   },
   "page-not-found": {
     "page-title": "Strona nie znaleziona",
@@ -134,6 +132,9 @@
     "text": "Panel administracyjny",
     "login": "Zaloguj",
     "username": "Nazwa użytkownika",
-    "password": "Hasło"
+    "password": "Hasło",
+    "error": "Nieprawidłowe dane logowania.",
+    "success": "Logowanie udane.",
+    "dashboard": "Panel sterowania"
   }
 }

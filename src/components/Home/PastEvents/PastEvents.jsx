@@ -13,9 +13,14 @@ const Slider = lazy(() => import("./Slider/Slider"));
 
 export const PastEvents = () => {
   const { t } = useTranslation();
-  
-  const { data: pastEvents, isLoading, isError, error } = useQuery({
-    queryKey: ['pastEvents'],
+
+  const {
+    data: pastEvents,
+    isLoading,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["pastEvents"],
     queryFn: fetchPastEvents,
   });
 
@@ -30,19 +35,22 @@ export const PastEvents = () => {
         {pastEvents && (
           <Suspense fallback={<Spinner />}>
             <Slider pastEvents={pastEvents} />
+            <div className={styles.navButtons}>
+              <button
+                className={`custom-prev ${styles.button}`}
+                aria-label="Previous"
+              >
+                ←
+              </button>
+              <button
+                className={`custom-next ${styles.button}`}
+                aria-label="Next"
+              >
+                →
+              </button>
+            </div>
           </Suspense>
         )}
-        <div className={styles.navButtons}>
-          <button
-            className={`custom-prev ${styles.button}`}
-            aria-label="Previous"
-          >
-            ←
-          </button>
-          <button className={`custom-next ${styles.button}`} aria-label="Next">
-            →
-          </button>
-        </div>
       </div>
     </section>
   );
