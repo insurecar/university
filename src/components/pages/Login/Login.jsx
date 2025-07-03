@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { Logo } from "../../Header";
 import { Button } from "../../UI";
-import { login } from "../../../api/api";
 import { Spinner } from "../../UI";
+import { login } from "../../../utils/api";
 
 export const LoginComponent = () => {
   const { t } = useTranslation();

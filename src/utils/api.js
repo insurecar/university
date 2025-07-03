@@ -14,3 +14,11 @@ export const fetchTeamMembers = async () => {
   const response = await axiosInstance.get("/team-members");
   return response.data;
 };
+
+export const login = async (username, password) => {
+  const response = await axiosInstance.post("/auth/login", {
+    username,
+    password,
+  });
+  return response.data;
+};

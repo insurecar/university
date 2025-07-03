@@ -35,22 +35,22 @@ export const PastEvents = () => {
         {pastEvents && (
           <Suspense fallback={<Spinner />}>
             <Slider pastEvents={pastEvents} />
-          )}
-          <div className={styles.navButtons}>
-            <button
-              className={`custom-prev ${styles.button}`}
-              aria-label="Previous"
-            >
-              ←
-            </button>
-            <button
-              className={`custom-next ${styles.button}`}
-              aria-label="Next"
-            >
-              →
-            </button>
-          </div>
-        </Suspense>
+            <div className={styles.navButtons}>
+              <button
+                className={`custom-prev ${styles.button}`}
+                aria-label="Previous"
+              >
+                ←
+              </button>
+              <button
+                className={`custom-next ${styles.button}`}
+                aria-label="Next"
+              >
+                →
+              </button>
+            </div>
+          </Suspense>
+        )}
       </div>
     </section>
   );
